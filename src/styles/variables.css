@@ -1,0 +1,17 @@
+:root {
+  --primary-burgundy: #7a1f36;
+  --secondary-burgundy: #541123;
+  --accent-gold: #c59b27;
+  --gold-light: #e5c158;
+  --bg-paper: #fcfbf7;
+  --bg-parchment: #f7f4ec;
+  --text-dark: #2c2523;
+  --text-muted: #6b635b;
+  --border-gold: rgba(197, 155, 39, 0.4);
+  --content-max-width: 480px;
+
+  --font-heading: 'Cinzel', 'Playfair Display', 'Georgia', serif;
+  --font-script: 'Great Vibes', 'Allura', cursive;
+  --font-body: 'Cormorant Garamond', 'Garamond', serif;
+}
+

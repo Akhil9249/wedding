@@ -1,0 +1,29 @@
+.wedding-header {
+  text-align: center;
+  padding: 40px 20px 20px;
+}
+
+.auspicious-symbol {
+  font-family: var(--font-heading, serif);
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  color: var(--primary-burgundy, #7a1f36);
+  margin-bottom: 12px;
+}
+
+.blessings-quote {
+  font-family: var(--font-body, serif);
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--text-muted, #666);
+  max-width: 320px;
+  margin: 0 auto 14px;
+  line-height: 1.4;
+}
+
+.floral-divider {
+  color: var(--accent-gold, #c59b27);
+  font-size: 0.9rem;
+  letter-spacing: 4px;
+}
+

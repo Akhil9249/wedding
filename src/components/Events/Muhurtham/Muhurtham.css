@@ -1,0 +1,30 @@
+.muhurtham-card {
+  border: 1.5px solid var(--accent-gold, #c59b27);
+  border-radius: 16px;
+  background: rgba(197, 155, 39, 0.05);
+  margin: 20px 16px;
+  position: relative;
+}
+
+.gold-highlight {
+  color: var(--accent-gold, #c59b27);
+  font-weight: 700;
+}
+
+.mandap-motif {
+  margin: 16px 0;
+  font-size: 1.8rem;
+  letter-spacing: 10px;
+}
+
+.event-date-time.highlight {
+  font-size: 1.05rem;
+  color: var(--primary-burgundy, #7a1f36);
+}
+
+.gold-tag {
+  background: var(--accent-gold, #c59b27);
+  color: #fff;
+  border: none;
+}
+

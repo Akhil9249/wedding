@@ -1,0 +1,52 @@
+.wedding-venue {
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.venue-card {
+  border: 1px solid var(--border-gold, #c59b27);
+  background: #ffffff;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+
+.venue-label {
+  font-family: var(--font-heading, serif);
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  color: var(--accent-gold, #c59b27);
+  display: block;
+  margin-bottom: 8px;
+}
+
+.venue-name {
+  font-family: var(--font-heading, serif);
+  font-size: 1.6rem;
+  color: var(--primary-burgundy, #7a1f36);
+  margin: 0 0 8px;
+}
+
+.venue-location {
+  font-family: var(--font-body, serif);
+  font-size: 1.05rem;
+  color: var(--text-muted, #666);
+  margin-bottom: 20px;
+}
+
+.map-button {
+  display: inline-block;
+  padding: 10px 24px;
+  background: var(--primary-burgundy, #7a1f36);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 24px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.map-button:hover {
+  background: var(--secondary-burgundy, #541123);
+}
+

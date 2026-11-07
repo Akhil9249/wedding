@@ -1,0 +1,68 @@
+.wedding-hero {
+  text-align: center;
+  padding: 20px 24px 30px;
+}
+
+.monogram {
+  font-family: var(--font-heading, serif);
+  font-size: 1.6rem;
+  letter-spacing: 6px;
+  color: var(--accent-gold, #c59b27);
+  margin-bottom: 8px;
+}
+
+.couple-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  margin: 16px 0;
+}
+
+.bride-name,
+.groom-name {
+  font-family: var(--font-script, cursive);
+  font-size: 3.2rem;
+  color: var(--primary-burgundy, #7a1f36);
+  line-height: 1.1;
+}
+
+.ampersand {
+  font-family: var(--font-heading, serif);
+  font-size: 1.4rem;
+  color: var(--accent-gold, #c59b27);
+  font-style: italic;
+}
+
+.invitation-lead {
+  font-family: var(--font-body, serif);
+  font-size: 1.05rem;
+  color: var(--text-dark, #333);
+  max-width: 300px;
+  margin: 0 auto 20px;
+  line-height: 1.4;
+}
+
+.save-date-badge {
+  display: inline-flex;
+  flex-direction: column;
+  border: 1px solid var(--accent-gold, #c59b27);
+  padding: 8px 24px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.badge-text {
+  font-family: var(--font-heading, serif);
+  font-size: 0.75rem;
+  letter-spacing: 2.5px;
+  color: var(--primary-burgundy, #7a1f36);
+}
+
+.badge-date {
+  font-family: var(--font-body, serif);
+  font-size: 0.95rem;
+  color: var(--text-dark, #333);
+  font-weight: 600;
+}
+

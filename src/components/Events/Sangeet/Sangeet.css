@@ -1,0 +1,13 @@
+.sangeet-card {
+  background: rgba(122, 31, 54, 0.03);
+  border-radius: 16px;
+  border: 1px dashed var(--border-gold, #c59b27);
+  margin: 20px 16px;
+}
+
+.sangeet-royal-motif {
+  margin: 16px 0;
+  font-size: 1.8rem;
+  letter-spacing: 8px;
+}
+

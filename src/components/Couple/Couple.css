@@ -1,0 +1,254 @@
+.wedding-couple {
+  text-align: center;
+  padding: 17px 16px 48px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  border: none;
+}
+
+.couple-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(252, 251, 247, 0.35);
+  pointer-events: none;
+}
+
+.couple-content {
+  position: relative;
+  z-index: 1;
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+/* Top Decorative Ornament */
+.thirukalyanam-ornament-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.thirukalyanam-ornament-img {
+  width: 82px;
+  height: 35px;
+  object-fit: contain;
+  display: block;
+}
+
+/* Invocation Text */
+.divine-blessing {
+  font-family: 'Italianno', cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 25px;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #2A0F32;
+  width: 289px;
+  max-width: 100%;
+  height: 50px;
+  margin: 64px auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Ceremony Titles */
+.thirukalyanam-title {
+  font-family: 'Perfecto Calligraphy - Personal use', 'Perfecto Calligraphy', var(--font-script, 'Great Vibes'), cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 40px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #2A0F32;
+  width: 192px;
+  max-width: 100%;
+  height: 60px;
+  margin: 9px auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.thirukalyanam-subtitle {
+  font-family: 'Italianno', cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #2A0F32;
+  margin: 0 auto;
+}
+
+/* Date and Muhurtham */
+.ceremony-schedule {
+  width: 289px;
+  max-width: 100%;
+  height: 36px;
+  margin: 32px auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.schedule-date,
+.schedule-muhurtham {
+  font-family: 'Calendula', var(--font-body, 'Cormorant Garamond'), Georgia, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #2A0F32;
+  margin: 0;
+}
+
+/* Venue Pill Button Wrapper */
+.venue-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 25px auto 28px;
+}
+
+/* Venue Pill Button */
+.venue-box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  max-width: 95%;
+  min-height: 28px;
+  height: 28px;
+  box-sizing: border-box;
+  border: 1px solid #2C190A;
+  border-radius: 6px;
+  padding: 4px 14px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.55);
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+  animation: venueBlink 1.8s ease-in-out infinite;
+}
+
+.venue-box:hover {
+  transform: scale(1.03);
+  background: #ffffff;
+  animation-play-state: paused;
+  box-shadow: 0 4px 14px rgba(44, 25, 10, 0.2);
+}
+
+.venue-box:active {
+  transform: scale(0.98);
+}
+
+@keyframes venueBlink {
+  0%, 100% {
+    opacity: 1;
+    border-color: #2C190A;
+    box-shadow: 0 0 0 0 rgba(44, 25, 10, 0.3);
+    background: rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    opacity: 0.65;
+    border-color: #7a1f36;
+    box-shadow: 0 0 10px 2px rgba(122, 31, 54, 0.35);
+    background: rgba(255, 255, 255, 0.95);
+  }
+}
+
+.venue-text {
+  font-family: 'Calendula', var(--font-body, 'Cormorant Garamond'), Georgia, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13.5px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #2C190A;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+/* Responsive scaling for mobile devices */
+@media (max-width: 480px) {
+  .venue-text {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 360px) {
+  .venue-box {
+    padding: 3px 10px;
+    height: 26px;
+    min-height: 26px;
+  }
+  .venue-text {
+    font-size: 10.5px;
+  }
+}
+
+/* Couple Illustration */
+.illustration-wrapper {
+  margin: 0 auto;
+  max-width: 360px;
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+
+.couple-illustration {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+
+/* Bottom Decorative Ornament */
+.couple-bottom-ornament-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 70px auto 8px;
+}
+
+/* Optional Person / Family Details */
+.couple-names-wrap {
+  margin-top: 24px;
+}
+
+.couple-person {
+  margin: 14px 0;
+}
+
+.person-name {
+  font-family: var(--font-heading, serif);
+  font-size: 1.4rem;
+  color: var(--primary-burgundy, #7a1f36);
+  margin-bottom: 4px;
+}
+
+.person-parents {
+  font-family: var(--font-body, serif);
+  font-size: 0.95rem;
+  color: var(--text-muted, #666);
+  font-style: italic;
+  max-width: 280px;
+  margin: 0 auto;
+}

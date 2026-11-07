@@ -1,0 +1,46 @@
+.music-player-fab {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1000;
+}
+
+.music-btn {
+  background: var(--primary-burgundy, #7a1f36);
+  color: #fff;
+  border: 2px solid var(--accent-gold, #c59b27);
+  border-radius: 50%;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, background 0.3s ease;
+  position: relative;
+}
+
+.music-btn:hover {
+  transform: scale(1.08);
+  background: var(--secondary-burgundy, #541123);
+}
+
+.music-btn.playing {
+  animation: pulseRotate 4s linear infinite;
+}
+
+.music-icon {
+  font-size: 1.3rem;
+}
+
+.music-tooltip {
+  display: none;
+}
+
+@keyframes pulseRotate {
+  0% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.06) rotate(180deg); }
+  100% { transform: scale(1) rotate(360deg); }
+}
+

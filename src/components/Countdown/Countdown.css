@@ -1,0 +1,66 @@
+.wedding-countdown {
+  text-align: center;
+  padding: 40px 20px;
+  background: rgba(122, 31, 54, 0.04);
+  border-top: 1px solid var(--border-gold, #c59b27);
+  border-bottom: 1px solid var(--border-gold, #c59b27);
+  margin: 30px 0;
+}
+
+.countdown-heading {
+  font-family: var(--font-heading, serif);
+  font-size: 1.1rem;
+  letter-spacing: 1.5px;
+  color: var(--primary-burgundy, #7a1f36);
+  margin-bottom: 24px;
+}
+
+.countdown-boxes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.time-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 58px;
+  padding: 10px 8px;
+  background: #ffffff;
+  border: 1px solid var(--border-gold, #c59b27);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.time-number {
+  font-family: var(--font-heading, serif);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--primary-burgundy, #7a1f36);
+  line-height: 1;
+}
+
+.time-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--accent-gold, #c59b27);
+  margin-top: 4px;
+}
+
+.time-colon {
+  font-family: var(--font-heading, serif);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent-gold, #c59b27);
+  margin-bottom: 18px;
+}
+
+.celebration-message {
+  font-family: var(--font-script, cursive);
+  font-size: 2rem;
+  color: var(--primary-burgundy, #7a1f36);
+}
+

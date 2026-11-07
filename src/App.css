@@ -1,0 +1,39 @@
+.wedding-app-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+.invitation-container {
+  width: 100%;
+  max-width: var(--content-max-width, 480px);
+  min-height: 100vh;
+  background: var(--bg-paper, #fcfbf7);
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow-x: hidden;
+  border-left: 1px solid rgba(197, 155, 39, 0.2);
+  border-right: 1px solid rgba(197, 155, 39, 0.2);
+}
+
+.wedding-footer {
+  text-align: center;
+  padding: 40px 20px 60px;
+  background: rgba(122, 31, 54, 0.03);
+  border-top: 1px solid var(--border-gold, #c59b27);
+}
+
+.footer-wishes {
+  font-family: var(--font-script, cursive);
+  font-size: 2.2rem;
+  color: var(--primary-burgundy, #7a1f36);
+  margin-bottom: 8px;
+}
+
+.footer-copyright {
+  font-family: var(--font-heading, serif);
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  color: var(--accent-gold, #c59b27);
+}
