@@ -22,7 +22,7 @@ function App() {
         {/* <MusicPlayer /> */}
 
         {/* 1. Header with Auspicious Blessings */}
-        {/* <Header /> */}
+        <Header data={weddingData.header} couple={weddingData.couple} />
 
         {/* 2. Hero Section with Monogram and Names */}
         {/* <Hero couple={weddingData.couple} dates={weddingData.dates} /> */}
@@ -31,16 +31,16 @@ function App() {
         <Couple couple={weddingData.couple} />
 
         {/* 4. Wedding Itinerary & Event Timeline */}
-        <Events events={weddingData.events} />
+        {/* <Events events={weddingData.events} /> */}
 
-        {/* 5. Live Countdown Timer */}
-        {/* <Countdown targetDateIso={weddingData.dates.targetDateIso} /> */}
+        {/* 5. Shaam e Sangeet Event */}
+        {/* <Countdown data={weddingData.sangeet} /> */}
 
-        {/* 6. Venue & Location with Google Maps */}
-        {/* <Venue venue={weddingData.venue} /> */}
+        {/* 6. Mangala Darshanam Event */}
+        {/* <Venue data={weddingData.mangalaDarshanam} /> */}
 
-        {/* 7. RSVP Form & Guest Wishes */}
-        {/* <RSVP /> */}
+        {/* 7. Varmala (Wedding) Event */}
+        {/* <RSVP data={weddingData.varmala} /> */}
 
         {/* Footer */}
         {/* <footer className="wedding-footer">

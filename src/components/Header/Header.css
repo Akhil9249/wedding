@@ -1,29 +1,305 @@
 .wedding-header {
   text-align: center;
-  padding: 40px 20px 20px;
+  padding: 0 16px 56px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  border: none;
 }
 
-.auspicious-symbol {
-  font-family: var(--font-heading, serif);
-  font-size: 1.1rem;
-  letter-spacing: 2px;
-  color: var(--primary-burgundy, #7a1f36);
-  margin-bottom: 12px;
+.header-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(252, 251, 247, 0.35);
+  pointer-events: none;
 }
 
-.blessings-quote {
-  font-family: var(--font-body, serif);
-  font-size: 1rem;
-  font-style: italic;
-  color: var(--text-muted, #666);
-  max-width: 320px;
-  margin: 0 auto 14px;
-  line-height: 1.4;
+.header-content {
+  position: relative;
+  z-index: 1;
+  max-width: 404px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
 }
 
-.floral-divider {
-  color: var(--accent-gold, #c59b27);
-  font-size: 0.9rem;
-  letter-spacing: 4px;
+/* 1. Auspicious Monogram Emblem */
+.header-placeholder-box {
+  width: 88px;
+  height: 120px;
+  margin: 51px auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  opacity: 1;
 }
 
+.header-placeholder-img {
+  width: 88px;
+  height: 120px;
+  object-fit: contain;
+  display: block;
+  opacity: 1;
+}
+
+/* 2. Auspicious Sanskrit Shloka */
+.header-shloka {
+  width: 221px;
+  max-width: 100%;
+  height: 36px;
+  margin: 36px auto 0;
+  text-align: center;
+  transform: rotate(0deg);
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.header-shloka .shloka-line {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 275;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #000000;
+  margin: 0;
+  white-space: nowrap;
+}
+
+/* 3. Grace & Blessings */
+.header-grace {
+  width: 221px;
+  max-width: 100%;
+  height: 50px;
+  margin: 39px auto 0;
+  text-align: center;
+  transform: rotate(0deg);
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.header-grace .grace-line {
+  font-family: 'Italianno', cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #000000;
+  margin: 0;
+  white-space: nowrap;
+}
+
+/* 4. Invitation Lead */
+.header-invitation {
+  width: 195px;
+  max-width: 100%;
+  height: 50px;
+  margin: 45px auto 0;
+  text-align: center;
+  transform: rotate(0deg);
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.header-invitation .invitation-line {
+  font-family: 'Italianno', cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #000000;
+  margin: 0;
+  white-space: nowrap;
+}
+
+/* 5 & 7. Bride and Groom Details */
+.header-person {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.header-person.bride-block {
+  margin-top: 42px;
+}
+
+/* .header-person.groom-block {
+  margin-top: 18px;
+} */
+
+.header-person .person-name {
+  font-family: 'Italianno', cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 40px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #000000;
+  margin: 0 auto;
+  text-align: center;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(0deg);
+  opacity: 1;
+  box-sizing: border-box;
+}
+
+.header-person.bride-block .person-name {
+  width: 99px;
+}
+
+.header-person.groom-block .person-name {
+  width: 58px;
+}
+
+.header-person .person-parents {
+  width: 261px;
+  max-width: 100%;
+  height: 25px;
+  margin: 6px auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(0deg);
+  opacity: 1;
+  font-family: 'Italianno', cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #000000;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+/* 6. Ampersand */
+.header-ampersand {
+  width: 25px;
+  height: 50px;
+  margin: 5px auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(0deg);
+  opacity: 1;
+  font-family: 'Italianno', cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 40px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #000000;
+  box-sizing: border-box;
+}
+
+/* Responsive Scaling */
+@media (max-width: 480px) {
+  .header-placeholder-box {
+    margin-top: 51px;
+  }
+  .header-shloka {
+    margin-top: 36px;
+  }
+  .header-grace {
+    margin-top: 39px;
+  }
+  .header-invitation {
+    margin-top: 45px;
+  }
+  .header-person.bride-block {
+    margin-top: 42px;
+  }
+}
+
+@media (max-width: 360px) {
+  .header-placeholder-box {
+    width: 64px;
+    height: auto;
+    margin-top: 48px;
+  }
+  .header-shloka {
+    width: 210px;
+    height: auto;
+    margin-top: 30px;
+  }
+  .header-shloka .shloka-line {
+    font-size: 10px;
+    line-height: 16px;
+  }
+  .header-grace {
+    width: 210px;
+    height: auto;
+    margin-top: 32px;
+  }
+  .header-grace .grace-line {
+    font-size: 18px;
+  }
+  .header-invitation {
+    width: 185px;
+    height: auto;
+    margin-top: 36px;
+  }
+  .header-invitation .invitation-line {
+    font-size: 18px;
+  }
+  .header-person .person-parents {
+    width: 240px;
+    height: auto;
+    font-size: 18px;
+  }
+  .header-person .person-name {
+    font-size: 34px;
+  }
+  .header-ampersand {
+    font-size: 26px;
+  }
+}
+
+/* Stagger delays for smooth cascading visibility on load/scroll */
+.header-placeholder-box.scroll-reveal {
+  transition-delay: 0.1s;
+}
+.header-shloka.scroll-reveal {
+  transition-delay: 0.25s;
+}
+.header-grace.scroll-reveal {
+  transition-delay: 0.4s;
+}
+.header-invitation.scroll-reveal {
+  transition-delay: 0.55s;
+}
+.header-person.bride-block.scroll-reveal {
+  transition-delay: 0.7s;
+}
+.header-ampersand.scroll-reveal {
+  transition-delay: 0.82s;
+}
+.header-person.groom-block.scroll-reveal {
+  transition-delay: 0.95s;
+}

@@ -1,52 +1,212 @@
-.wedding-venue {
-  padding: 30px 20px;
+.wedding-darshanam {
   text-align: center;
+  padding: 0 16px 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  border: none;
 }
 
-.venue-card {
-  border: 1px solid var(--border-gold, #c59b27);
-  background: #ffffff;
-  padding: 30px 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+.darshanam-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(252, 251, 247, 0.35);
+  pointer-events: none;
 }
 
-.venue-label {
-  font-family: var(--font-heading, serif);
-  font-size: 0.75rem;
-  letter-spacing: 2px;
-  color: var(--accent-gold, #c59b27);
+.darshanam-content {
+  position: relative;
+  z-index: 1;
+  max-width: 404px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Tagline */
+.darshanam-tagline {
+  font-family: 'Italianno', cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 1.35;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #2A0F32;
+  width: 340px;
+  max-width: 100%;
+  margin: 60px auto 0;
   display: block;
-  margin-bottom: 8px;
+  box-sizing: border-box;
 }
 
-.venue-name {
-  font-family: var(--font-heading, serif);
-  font-size: 1.6rem;
-  color: var(--primary-burgundy, #7a1f36);
-  margin: 0 0 8px;
+/* Title */
+.darshanam-title {
+  font-family: 'Perfecto Calligraphy - Personal use', 'Perfecto Calligraphy', var(--font-script, 'Great Vibes'), cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 40px;
+  line-height: 1.15;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #2A0F32;
+  margin: 14px auto 0;
+  display: block;
+  box-sizing: border-box;
 }
 
-.venue-location {
-  font-family: var(--font-body, serif);
-  font-size: 1.05rem;
-  color: var(--text-muted, #666);
-  margin-bottom: 20px;
+/* Subtitle */
+.darshanam-subtitle {
+  font-family: 'Italianno', cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #2A0F32;
+  margin: 6px auto 0;
+  display: block;
+  box-sizing: border-box;
 }
 
-.map-button {
-  display: inline-block;
-  padding: 10px 24px;
-  background: var(--primary-burgundy, #7a1f36);
-  color: #ffffff;
+/* Schedule */
+.darshanam-schedule {
+  margin: 28px auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.darshanam-schedule .schedule-date,
+.darshanam-schedule .schedule-time {
+  font-family: 'Calendula', var(--font-body, 'Cormorant Garamond'), Georgia, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #2A0F32;
+  margin: 0;
+}
+
+/* Venue Pill Button Wrapper */
+.darshanam-venue-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 22px auto 12px;
+}
+
+/* Venue Pill Button */
+.darshanam-venue-box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  max-width: 95%;
+  min-height: 28px;
+  height: 28px;
+  box-sizing: border-box;
+  border: 1px solid #2C190A;
+  border-radius: 6px;
+  padding: 4px 14px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.55);
   text-decoration: none;
-  border-radius: 24px;
-  font-size: 0.9rem;
-  font-weight: 500;
-  transition: background 0.3s ease;
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+  animation: darshanamVenueBlink 1.8s ease-in-out infinite;
 }
 
-.map-button:hover {
-  background: var(--secondary-burgundy, #541123);
+.darshanam-venue-box:hover {
+  transform: scale(1.03);
+  background: #ffffff;
+  animation-play-state: paused;
+  box-shadow: 0 4px 14px rgba(44, 25, 10, 0.2);
 }
 
+.darshanam-venue-box:active {
+  transform: scale(0.98);
+}
+
+@keyframes darshanamVenueBlink {
+  0%, 100% {
+    opacity: 1;
+    border-color: #2C190A;
+    box-shadow: 0 0 0 0 rgba(44, 25, 10, 0.3);
+    background: rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    opacity: 0.65;
+    border-color: #7a1f36;
+    box-shadow: 0 0 10px 2px rgba(122, 31, 54, 0.35);
+    background: rgba(255, 255, 255, 0.95);
+  }
+}
+
+.darshanam-venue-text {
+  font-family: 'Calendula', var(--font-body, 'Cormorant Garamond'), Georgia, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #2C190A;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+/* Illustration */
+.darshanam-illustration-wrapper {
+  margin: 14px auto 0;
+  max-width: 402px;
+  width: 100%;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  display: flex;
+  justify-content: center;
+}
+
+.darshanam-illustration-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+
+/* Responsive Scaling */
+@media (max-width: 480px) {
+  .darshanam-venue-text {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 360px) {
+  .darshanam-venue-box {
+    padding: 3px 10px;
+    height: 26px;
+    min-height: 26px;
+  }
+  .darshanam-venue-text {
+    font-size: 10.5px;
+  }
+  .darshanam-title {
+    font-size: 34px;
+  }
+  .darshanam-tagline,
+  .darshanam-subtitle {
+    font-size: 18px;
+  }
+}

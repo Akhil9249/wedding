@@ -3,11 +3,19 @@
   display: flex;
   justify-content: center;
   padding: 0;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.wedding-app-wrapper::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
 }
 
 .invitation-container {
   width: 100%;
-  max-width: var(--content-max-width, 480px);
+  max-width: var(--content-max-width, 404px);
   min-height: 100vh;
   background: var(--bg-paper, #fcfbf7);
   box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
@@ -15,6 +23,14 @@
   overflow-x: hidden;
   border-left: 1px solid rgba(197, 155, 39, 0.2);
   border-right: 1px solid rgba(197, 155, 39, 0.2);
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.invitation-container::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
 }
 
 .wedding-footer {

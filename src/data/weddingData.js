@@ -1,14 +1,58 @@
+import emblemImg from '../assets/images/emblem.png';
+
 export const weddingData = {
+  header: {
+    placeholderImage: emblemImg,
+    shloka: [
+      "मंगलम् भगवान विष्णुः, मंगलम् गरुणध्वजः।",
+      "मंगलम् पुण्डरी काक्षः, मंगलाय तनो हरिः॥"
+    ],
+    graceLines: [
+      "With the infinite grace of Lord Ganesha",
+      "and the everlasting blessings of our parents"
+    ],
+    invitationLines: [
+      "We are delighted to",
+      "invite you to celebrate the union of"
+    ]
+  },
+  sangeet: {
+    tagline: "Come ready to dance, celebrate, and keep the party going all night long!",
+    title: "Shaam e Sangeet",
+    subtitle: "(Sangeet)",
+    date: "Date: Monday, 4th January 2027",
+    time: "Time: 7:00pm",
+    venue: "Venue: Open stage, Ashirvadh Nature Resort, Wayanad",
+    mapUrl: "https://maps.google.com/?q=Ashirvadh+Nature+Resort+Wayanad"
+  },
+  mangalaDarshanam: {
+    tagline: "A morning of prayers, blessings and gratitude as we seek divine blessings for our new beginning",
+    title: "Mangala Darshanam",
+    subtitle: "(Temple darshan and blessings)",
+    date: "Date: Tuesday, 5th January 2027",
+    time: "Time: 7:00am",
+    venue: "Venue: Lorem......................................",
+    mapUrl: "https://maps.google.com/?q=Guruvayur+Sree+Krishna+Temple"
+  },
+  varmala: {
+    tagline: "Witness an evening of sacred vows and promises for a lifetime",
+    title: "Varmala",
+    subtitle: "(Wedding)",
+    date: "Date: Tuesday, 5th January 2027",
+    time: "Time: 3:30pm",
+    venue: "Venue: Amphitheatre, Ashirvadh Nature Resort, Wayanad",
+    mapUrl: "https://maps.google.com/?q=Ashirvadh+Nature+Resort+Wayanad"
+  },
   couple: {
     bride: {
       firstName: "Manisha",
       fullName: "Manisha Sharma",
-      parents: "Daughter of Mrs. Sunita & Mr. Rajesh Sharma"
+      parents: "Daughter of Smt. Maya & Shri. Murali"
     },
     groom: {
       firstName: "Neel",
       fullName: "Neel Patel",
-      parents: "Son of Mrs. Rekha & Mr. Arvind Patel"
+      parents: "Son of Smt. Sheena &  Shri .Premchandran"
     },
     tagline: "Together with their families invite you to celebrate their wedding"
   },

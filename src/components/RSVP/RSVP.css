@@ -1,114 +1,212 @@
-.wedding-rsvp {
-  padding: 30px 20px 60px;
-}
-
-.rsvp-card {
-  background: #ffffff;
-  border: 1px solid var(--border-gold, #c59b27);
-  border-radius: 16px;
-  padding: 32px 24px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+.wedding-varmala {
   text-align: center;
+  padding: 0 16px 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  border: none;
 }
 
-.rsvp-label {
-  font-family: var(--font-heading, serif);
-  font-size: 0.75rem;
-  letter-spacing: 2px;
-  color: var(--accent-gold, #c59b27);
+.varmala-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(252, 251, 247, 0.35);
+  pointer-events: none;
 }
 
-.rsvp-title {
-  font-family: var(--font-script, cursive);
-  font-size: 2.8rem;
-  color: var(--primary-burgundy, #7a1f36);
-  margin: 4px 0;
-}
-
-.rsvp-subtitle {
-  font-family: var(--font-body, serif);
-  font-size: 0.95rem;
-  font-style: italic;
-  color: var(--text-muted, #666);
-  margin-bottom: 24px;
-}
-
-.rsvp-form {
-  text-align: left;
-}
-
-.form-group {
-  margin-bottom: 16px;
-}
-
-.form-group label {
-  display: block;
-  font-size: 0.8rem;
-  font-family: var(--font-heading, serif);
-  color: var(--text-dark, #333);
-  margin-bottom: 6px;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
+.varmala-content {
+  position: relative;
+  z-index: 1;
+  max-width: 404px;
   width: 100%;
-  padding: 10px 14px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  font-family: inherit;
-  font-size: 0.9rem;
-  background: var(--bg-paper, #fcfbf7);
+  margin: 0 auto;
+}
+
+/* Tagline */
+.varmala-tagline {
+  font-family: 'Italianno', cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 1.35;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #2A0F32;
+  width: 380px;
+  max-width: 95%;
+  margin: 60px auto 0;
+  display: block;
   box-sizing: border-box;
 }
 
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-  outline: none;
-  border-color: var(--primary-burgundy, #7a1f36);
+/* Title */
+.varmala-title {
+  font-family: 'Perfecto Calligraphy - Personal use', 'Perfecto Calligraphy', var(--font-script, 'Great Vibes'), cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 40px;
+  line-height: 1.15;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #2A0F32;
+  margin: 14px auto 0;
+  display: block;
+  box-sizing: border-box;
 }
 
-.form-row {
+/* Subtitle */
+.varmala-subtitle {
+  font-family: 'Italianno', cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #2A0F32;
+  margin: 6px auto 0;
+  display: block;
+  box-sizing: border-box;
+}
+
+/* Schedule */
+.varmala-schedule {
+  margin: 28px auto 0;
   display: flex;
-  gap: 12px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
 }
 
-.form-row .form-group {
-  flex: 1;
+.varmala-schedule .schedule-date,
+.varmala-schedule .schedule-time {
+  font-family: 'Calendula', var(--font-body, 'Cormorant Garamond'), Georgia, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #2A0F32;
+  margin: 0;
 }
 
-.rsvp-submit-btn {
+/* Venue Pill Button Wrapper (Locked X-Axis Center) */
+.varmala-venue-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  padding: 12px;
-  background: var(--primary-burgundy, #7a1f36);
-  color: #ffffff;
-  border: none;
-  border-radius: 24px;
-  font-family: var(--font-heading, serif);
-  font-size: 0.9rem;
-  letter-spacing: 1px;
+  margin: 22px auto 12px;
+}
+
+/* Venue Pill Button */
+.varmala-venue-box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  max-width: 95%;
+  min-height: 28px;
+  height: 28px;
+  box-sizing: border-box;
+  border: 1px solid #2C190A;
+  border-radius: 6px;
+  padding: 4px 14px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.55);
+  text-decoration: none;
   cursor: pointer;
-  margin-top: 8px;
-  transition: background 0.3s ease;
+  user-select: none;
+  text-align: center;
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+  animation: varmalaVenueBlink 1.8s ease-in-out infinite;
 }
 
-.rsvp-submit-btn:hover {
-  background: var(--secondary-burgundy, #541123);
+.varmala-venue-box:hover {
+  transform: scale(1.03);
+  background: #ffffff;
+  animation-play-state: paused;
+  box-shadow: 0 4px 14px rgba(44, 25, 10, 0.2);
 }
 
-.rsvp-thankyou {
-  padding: 24px 0;
+.varmala-venue-box:active {
+  transform: scale(0.98);
 }
 
-.rsvp-thankyou h4 {
-  font-family: var(--font-script, cursive);
-  font-size: 2.2rem;
-  color: var(--primary-burgundy, #7a1f36);
-  margin-bottom: 8px;
+@keyframes varmalaVenueBlink {
+  0%, 100% {
+    opacity: 1;
+    border-color: #2C190A;
+    box-shadow: 0 0 0 0 rgba(44, 25, 10, 0.3);
+    background: rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    opacity: 0.65;
+    border-color: #7a1f36;
+    box-shadow: 0 0 10px 2px rgba(122, 31, 54, 0.35);
+    background: rgba(255, 255, 255, 0.95);
+  }
 }
 
-.rsvp-thankyou p {
-  color: var(--text-muted, #666);
+.varmala-venue-text {
+  font-family: 'Calendula', var(--font-body, 'Cormorant Garamond'), Georgia, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #2C190A;
+  display: inline-block;
+  white-space: nowrap;
 }
 
+/* Golden Mandap & Couple Illustration */
+.varmala-illustration-wrapper {
+  margin: 18px auto 0;
+  max-width: 402px;
+  width: 100%;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  display: flex;
+  justify-content: center;
+}
+
+.varmala-illustration-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+
+/* Responsive Scaling */
+@media (max-width: 480px) {
+  .varmala-venue-text {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 360px) {
+  .varmala-venue-box {
+    padding: 3px 10px;
+    height: 26px;
+    min-height: 26px;
+  }
+  .varmala-venue-text {
+    font-size: 10.5px;
+  }
+  .varmala-title {
+    font-size: 34px;
+  }
+  .varmala-tagline,
+  .varmala-subtitle {
+    font-size: 18px;
+  }
+}

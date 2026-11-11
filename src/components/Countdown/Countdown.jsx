@@ -1,39 +1,64 @@
 import React from 'react';
 import './Countdown.css';
-import { useCountdown } from '../../hooks/useCountdown';
+import bgImg from '../../assets/images/bg.png';
+import sangeetImg from '../../assets/images/sangeet.png';
+import { weddingData } from '../../data/weddingData';
 
-export default function Countdown({ targetDateIso }) {
-  const { days, hours, minutes, seconds, isEnded } = useCountdown(targetDateIso);
+export default function Countdown({ data }) {
+  const event = data || weddingData.sangeet;
 
   return (
-    <section className="wedding-countdown scroll-reveal">
-      <h3 className="countdown-heading">Counting Down to the Big Day</h3>
-      {isEnded ? (
-        <p className="celebration-message">Today is the Day! Let the celebrations begin! 🎉</p>
-      ) : (
-        <div className="countdown-boxes">
-          <div className="time-box">
-            <span className="time-number">{days}</span>
-            <span className="time-label">Days</span>
-          </div>
-          <span className="time-colon">:</span>
-          <div className="time-box">
-            <span className="time-number">{hours}</span>
-            <span className="time-label">Hours</span>
-          </div>
-          <span className="time-colon">:</span>
-          <div className="time-box">
-            <span className="time-number">{minutes}</span>
-            <span className="time-label">Minutes</span>
-          </div>
-          <span className="time-colon">:</span>
-          <div className="time-box">
-            <span className="time-number">{seconds}</span>
-            <span className="time-label">Seconds</span>
-          </div>
+    <section 
+      className="wedding-sangeet scroll-reveal"
+      style={{ backgroundImage: `url(${bgImg})` }}
+    >
+      <div className="sangeet-overlay" aria-hidden="true"></div>
+
+      <div className="sangeet-content">
+        {/* Intro Tagline */}
+        <p className="sangeet-tagline">
+          {event?.tagline || "Come ready to dance, celebrate, and keep the party going all night long!"}
+        </p>
+
+        {/* Event Title */}
+        <h2 className="sangeet-title">{event?.title || "Shaam e Sangeet"}</h2>
+
+        {/* Event Subtitle */}
+        <p className="sangeet-subtitle">{event?.subtitle || "(Sangeet)"}</p>
+
+        {/* Date & Time */}
+        <div className="sangeet-schedule">
+          <p className="schedule-date">{event?.date || "Date: Monday, 4th January 2027"}</p>
+          <p className="schedule-time">{event?.time || "Time: 7:00pm"}</p>
         </div>
-      )}
+
+        {/* Venue Button */}
+        <div className="sangeet-venue-wrapper">
+          <a 
+            href={event?.mapUrl || "https://maps.google.com/?q=Ashirvadh+Nature+Resort+Wayanad"}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="sangeet-venue-box"
+            aria-label="View Venue on Google Maps"
+          >
+            <span className="sangeet-venue-text">
+              {event?.venue || "Venue: Open stage, Ashirvadh Nature Resort, Wayanad"}
+            </span>
+          </a>
+        </div>
+
+        {/* Decor & Gramophone Illustration */}
+        <div className="sangeet-illustration-wrapper">
+          <img 
+            src={sangeetImg} 
+            alt="Shaam e Sangeet traditional decor illustration" 
+            className="sangeet-illustration-img"
+            width="402"
+            height="558"
+            loading="eager"
+          />
+        </div>
+      </div>
     </section>
   );
 }
-

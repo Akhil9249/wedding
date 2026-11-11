@@ -19,7 +19,8 @@
 .couple-content {
   position: relative;
   z-index: 1;
-  max-width: 440px;
+  max-width: 404px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -205,10 +206,18 @@
 /* Couple Illustration */
 .illustration-wrapper {
   margin: 0 auto;
-  max-width: 360px;
+  max-width: 402px;
+  width: 100%;
   border: none;
   box-shadow: none;
   outline: none;
+  display: flex;
+  justify-content: center;
+}
+
+.couple-illustration-picture {
+  display: block;
+  width: 100%;
 }
 
 .couple-illustration {
@@ -251,4 +260,21 @@
   font-style: italic;
   max-width: 280px;
   margin: 0 auto;
+}
+
+/* Smooth scroll reveal timing for Couple */
+.divine-blessing.scroll-reveal {
+  transition-delay: 0.05s;
+}
+.thirukalyanam-title.scroll-reveal {
+  transition-delay: 0.1s;
+}
+.thirukalyanam-subtitle.scroll-reveal {
+  transition-delay: 0.15s;
+}
+.ceremony-schedule.scroll-reveal {
+  transition-delay: 0.1s;
+}
+.venue-wrapper.scroll-reveal {
+  transition-delay: 0.12s;
 }
