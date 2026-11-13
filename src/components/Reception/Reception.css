@@ -1,0 +1,302 @@
+.wedding-reception {
+  text-align: center;
+  padding: 0 16px 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  border: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.reception-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(252, 251, 247, 0.35);
+  pointer-events: none;
+}
+
+/* Hanging Brass Bells in Corners */
+.reception-bell-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90px;
+  height: auto;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.reception-bell-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 89px;
+  height: auto;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.reception-content {
+  position: relative;
+  z-index: 1;
+  max-width: 404px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Intro Tagline */
+.reception-tagline {
+  font-family: 'Italianno', cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 1.25;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #000000;
+  width: 320px;
+  max-width: 95%;
+  margin: 148px auto 0;
+  display: block;
+  box-sizing: border-box;
+}
+
+/* Event Title */
+.reception-title {
+  font-family: 'Perfecto Calligraphy - Personal use', 'Perfecto Calligraphy', var(--font-script, 'Great Vibes'), cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 40px;
+  line-height: 1.15;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #000000;
+  margin: 36px auto 0;
+  display: block;
+  box-sizing: border-box;
+}
+
+/* Event Subtitle */
+.reception-subtitle {
+  font-family: 'Italianno', cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #000000;
+  margin: 22px auto 0;
+  display: block;
+  box-sizing: border-box;
+}
+
+/* Date & Time Schedule */
+.reception-schedule {
+  margin: 36px auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.reception-schedule .schedule-date,
+.reception-schedule .schedule-time {
+  font-family: 'Calendula', var(--font-body, 'Cormorant Garamond'), Georgia, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #000000;
+  margin: 0;
+}
+
+/* Venue Pill Button Wrapper */
+.reception-venue-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 24px auto 0;
+}
+
+/* Venue Pill Button */
+.reception-venue-box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  max-width: 95%;
+  min-height: 28px;
+  height: 28px;
+  box-sizing: border-box;
+  border: 1px solid #2C190A;
+  border-radius: 6px;
+  padding: 4px 16px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.55);
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+  animation: receptionVenueBlink 1.8s ease-in-out infinite;
+}
+
+.reception-venue-box:hover {
+  transform: scale(1.03);
+  background: #ffffff;
+  animation-play-state: paused;
+  box-shadow: 0 4px 14px rgba(44, 25, 10, 0.2);
+}
+
+.reception-venue-box:active {
+  transform: scale(0.98);
+}
+
+@keyframes receptionVenueBlink {
+  0%, 100% {
+    opacity: 1;
+    border-color: #2C190A;
+    box-shadow: 0 0 0 0 rgba(44, 25, 10, 0.3);
+    background: rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    opacity: 0.65;
+    border-color: #7a1f36;
+    box-shadow: 0 0 10px 2px rgba(122, 31, 54, 0.35);
+    background: rgba(255, 255, 255, 0.95);
+  }
+}
+
+.reception-venue-text {
+  font-family: 'Calendula', var(--font-body, 'Cormorant Garamond'), Georgia, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #000000;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+/* Balcony & Veena Illustration */
+.reception-illustration-wrapper {
+  margin: 38px auto 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.reception-illustration-img {
+  width: 100%;
+  max-width: 314px;
+  height: auto;
+  display: block;
+}
+
+/* Bottom Credits Footer Bar */
+.reception-footer {
+  margin: 28px -16px 0;
+  width: calc(100% + 32px);
+  background: rgba(245, 235, 228, 0.85);
+  border-top: 1px solid rgba(44, 25, 10, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 8px 10px;
+  box-sizing: border-box;
+}
+
+.footer-brand {
+  font-family: 'Cinzel', 'Poppins', Georgia, serif;
+  font-size: 11px;
+  font-weight: 700;
+  color: #2A0F32;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.footer-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 10px;
+  color: #2A0F32;
+  text-decoration: none;
+  letter-spacing: 0.2px;
+  white-space: nowrap;
+  transition: opacity 0.2s ease, text-decoration 0.2s ease;
+}
+
+.footer-link:hover {
+  opacity: 0.75;
+  text-decoration: underline;
+}
+
+.footer-icon {
+  flex-shrink: 0;
+  opacity: 0.85;
+}
+
+/* Responsive Scaling */
+@media (max-width: 380px) {
+  .reception-bell-left {
+    width: 78px;
+  }
+  .reception-bell-right {
+    width: 77px;
+  }
+  .reception-tagline {
+    margin-top: 125px;
+    font-size: 18px;
+  }
+  .reception-title {
+    font-size: 34px;
+    margin-top: 28px;
+  }
+  .reception-subtitle {
+    font-size: 18px;
+    margin-top: 18px;
+  }
+  .reception-schedule {
+    margin-top: 28px;
+  }
+  .reception-venue-wrapper {
+    margin-top: 20px;
+  }
+  .reception-venue-box {
+    padding: 3px 12px;
+    height: 26px;
+    min-height: 26px;
+  }
+  .reception-venue-text {
+    font-size: 12px;
+  }
+  .reception-illustration-wrapper {
+    margin-top: 28px;
+  }
+  .footer-brand {
+    font-size: 9.5px;
+  }
+  .footer-link {
+    font-size: 8.5px;
+    gap: 2px;
+  }
+  .footer-icon {
+    width: 11px;
+    height: 11px;
+  }
+}
+

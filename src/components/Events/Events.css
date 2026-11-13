@@ -24,6 +24,27 @@
   margin: 0 auto;
 }
 
+/* Top Decorative Ornament */
+.pool-ornament-wrap {
+  width: 82px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 44px auto 0;
+  transform: rotate(0deg);
+  opacity: 1;
+}
+
+.pool-ornament-img {
+  width: 82px;
+  height: 35px;
+  object-fit: contain;
+  display: block;
+  transform: rotate(0deg);
+  opacity: 1;
+}
+
 /* Tagline */
 .pool-tagline {
   font-family: 'Italianno', cursive;
@@ -33,14 +54,16 @@
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  color: #2A0F32;
+  color: #000000;
   width: 334px;
   max-width: 100%;
   height: 25px;
-  margin: 61px auto 0;
+  margin: 56px auto 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  transform: rotate(0deg);
+  opacity: 1;
   box-sizing: border-box;
 }
 
@@ -53,14 +76,12 @@
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  color: #2A0F32;
-  width: 290px;
+  color: #000000;
   max-width: 100%;
-  height: 120px;
-  margin: 8px auto 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin: 30px auto 0;
+  display: block;
+  transform: rotate(0deg);
+  opacity: 1;
   box-sizing: border-box;
 }
 
@@ -73,14 +94,16 @@
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  color: #2A0F32;
+  color: #000000;
   width: 334px;
   max-width: 100%;
   height: 25px;
-  margin: 3px auto 0;
+  margin: 32px auto 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  transform: rotate(0deg);
+  opacity: 1;
   box-sizing: border-box;
 }
 
@@ -89,11 +112,13 @@
   width: 289px;
   max-width: 100%;
   height: 36px;
-  margin: 28px auto 0;
+  margin: 40px auto 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  transform: rotate(0deg);
+  opacity: 1;
   box-sizing: border-box;
 }
 
@@ -103,10 +128,10 @@
   font-weight: 400;
   font-style: normal;
   font-size: 14px;
-  line-height: 18px;
+  line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  color: #2A0F32;
+  color: #000000;
   margin: 0;
 }
 
@@ -116,7 +141,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin: 22px auto 10px;
+  margin: 30px auto 10px;
 }
 
 /* Venue Pill Button */
@@ -172,19 +197,13 @@
   font-family: 'Calendula', var(--font-body, 'Cormorant Garamond'), Georgia, serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  color: #2C190A;
+  color: #000000;
   display: inline-block;
   white-space: nowrap;
-}
-
-@media (max-width: 480px) {
-  .pool-venue-text {
-    font-size: 12px;
-  }
 }
 
 @media (max-width: 360px) {
@@ -194,7 +213,7 @@
     min-height: 26px;
   }
   .pool-venue-text {
-    font-size: 10.5px;
+    font-size: 11.5px;
   }
 }
 
@@ -213,10 +232,10 @@
 
 /* Illustration */
 .pool-illustration-wrapper {
-  margin: 0 auto;
-  max-width: 380px;
-  width: 100%;
-  aspect-ratio: 402 / 388;
+  margin: 20px -16px 0;
+  width: calc(100% + 32px);
+  max-width: none;
+  aspect-ratio: 576 / 531;
   overflow: hidden;
   position: relative;
   border: none;

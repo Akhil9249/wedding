@@ -2,6 +2,7 @@ import React from 'react';
 import './RSVP.css';
 import bgImg from '../../assets/images/bg.png';
 import varmalaImg from '../../assets/images/varmala.png';
+import ornamentImg from '../../assets/images/ornament.png';
 import { weddingData } from '../../data/weddingData';
 
 export default function RSVP({ data }) {
@@ -56,6 +57,18 @@ export default function RSVP({ data }) {
             width="402"
             height="457"
             loading="eager"
+          />
+        </div>
+
+        {/* Bottom Decorative Ornament */}
+        <div className="varmala-bottom-ornament-wrap">
+          <img
+            src={ornamentImg}
+            alt=""
+            className="varmala-bottom-ornament-img"
+            width="82"
+            height="35"
+            aria-hidden="true"
           />
         </div>
       </div>

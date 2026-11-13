@@ -16,23 +16,35 @@ export const weddingData = {
       "invite you to celebrate the union of"
     ]
   },
+  welcomeDinner: {
+    tagline: [
+      "An evening of good food, music and togetherness.",
+      "Feel free to take the mic, sing a song and make the evening even more memorable!"
+    ],
+    title: "The First Toast",
+    subtitle: "(Welcome Dinner)",
+    date: "Date:  Sunday, 3rd January 2027",
+    time: "Time: 7:00 PM",
+    venue: "Venue: Lawn, Morickap Lords 83, Wayanad",
+    mapUrl: "https://maps.google.com/?q=Morickap+Lords+83+Wayanad"
+  },
   sangeet: {
     tagline: "Come ready to dance, celebrate, and keep the party going all night long!",
     title: "Shaam e Sangeet",
     subtitle: "(Sangeet)",
     date: "Date: Monday, 4th January 2027",
-    time: "Time: 7:00pm",
+    time: "Time: 7:00 PM",
     venue: "Venue: Open stage, Ashirvadh Nature Resort, Wayanad",
     mapUrl: "https://maps.google.com/?q=Ashirvadh+Nature+Resort+Wayanad"
   },
   mangalaDarshanam: {
-    tagline: "A morning of prayers, blessings and gratitude as we seek divine blessings for our new beginning",
-    title: "Mangala Darshanam",
-    subtitle: "(Temple darshan and blessings)",
+    tagline: "As two families come together, let us celebrate the richness of our traditions, the warmth of togetherness and the timeless flavours of Kerala",
+    title: "Naadan Virunnu",
+    subtitle: "(A Festive Feast)",
     date: "Date: Tuesday, 5th January 2027",
-    time: "Time: 7:00am",
-    venue: "Venue: Lorem......................................",
-    mapUrl: "https://maps.google.com/?q=Guruvayur+Sree+Krishna+Temple"
+    time: "Time: 12:00 PM",
+    venue: "Venue: Auditorium, Ashirvadh Nature Resort, Wayanad",
+    mapUrl: "https://maps.google.com/?q=Ashirvadh+Nature+Resort+Wayanad"
   },
   varmala: {
     tagline: "Witness an evening of sacred vows and promises for a lifetime",
@@ -42,6 +54,15 @@ export const weddingData = {
     time: "Time: 3:30pm",
     venue: "Venue: Amphitheatre, Ashirvadh Nature Resort, Wayanad",
     mapUrl: "https://maps.google.com/?q=Ashirvadh+Nature+Resort+Wayanad"
+  },
+  reception: {
+    tagline: "A celebration of love, tradition, and the coming together of two families",
+    title: "The Beginning of Always",
+    subtitle: "(Wedding Reception)",
+    date: "Date: Thursday, 7th January 2027",
+    time: "Time: 7:00 PM onwards",
+    venue: "Venue: Klay-hills, Calicut",
+    mapUrl: "https://maps.google.com/?q=Klay-hills+Calicut"
   },
   couple: {
     bride: {

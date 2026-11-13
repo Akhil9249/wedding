@@ -6,10 +6,12 @@ import { useScrollReveal } from './hooks/useScrollReveal';
 import Header from './components/Header/Header';
 import Hero from './components/Hero/Hero';
 import Couple from './components/Couple/Couple';
+import WelcomeDinner from './components/WelcomeDinner/WelcomeDinner';
 import Events from './components/Events/Events';
 import Countdown from './components/Countdown/Countdown';
 import Venue from './components/Venue/Venue';
 import RSVP from './components/RSVP/RSVP';
+import Reception from './components/Reception/Reception';
 import MusicPlayer from './components/MusicPlayer/MusicPlayer';
 
 function App() {
@@ -30,23 +32,26 @@ function App() {
         {/* 3. Couple Section with Bride & Groom Details */}
         <Couple couple={weddingData.couple} />
 
+        {/* 3.5 The First Toast (Welcome Dinner) */}
+        <WelcomeDinner data={weddingData.welcomeDinner} />
+
         {/* 4. Wedding Itinerary & Event Timeline */}
-        {/* <Events events={weddingData.events} /> */}
+        <Events events={weddingData.events} />
 
         {/* 5. Shaam e Sangeet Event */}
-        {/* <Countdown data={weddingData.sangeet} /> */}
+        <Countdown data={weddingData.sangeet} />
 
         {/* 6. Mangala Darshanam Event */}
-        {/* <Venue data={weddingData.mangalaDarshanam} /> */}
+        <Venue data={weddingData.mangalaDarshanam} />
 
         {/* 7. Varmala (Wedding) Event */}
-        {/* <RSVP data={weddingData.varmala} /> */}
+        <RSVP data={weddingData.varmala} />
+
+        {/* 8. The Beginning of Always (Wedding Reception) */}
+        <Reception data={weddingData.reception} />
 
         {/* Footer */}
-        {/* <footer className="wedding-footer">
-          <p className="footer-wishes">We look forward to celebrating with you!</p>
-          <p className="footer-copyright">With Warm Regards • The Families</p>
-        </footer> */}
+   
       </main>
     </div>
   );

@@ -1,9 +1,9 @@
 import React from 'react';
 import './Haldi.css';
-import haldiImg from '../../../assets/images/haldi.png';
-import courtyardWater from '../../../assets/images/courtyard_water.gif';
 
 export default function Haldi({ event }) {
+  const haldiImg = '';
+  const courtyardWater = '';
   return (
     <article className="event-card haldi-card scroll-reveal">
       <div className="event-badge">01 • CEREMONY</div>

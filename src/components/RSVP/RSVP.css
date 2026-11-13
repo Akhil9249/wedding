@@ -100,7 +100,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin: 22px auto 12px;
+  margin: 22px auto 0;
 }
 
 /* Venue Pill Button */
@@ -165,11 +165,11 @@
   white-space: nowrap;
 }
 
-/* Golden Mandap & Couple Illustration */
+/* Golden Mandap & Couple Illustration (Full Edge-to-Edge Width) */
 .varmala-illustration-wrapper {
-  margin: 18px auto 0;
-  max-width: 402px;
-  width: 100%;
+  margin: 42px -16px 0;
+  width: calc(100% + 32px);
+  max-width: none;
   border: none;
   box-shadow: none;
   outline: none;
@@ -184,6 +184,27 @@
   border: none;
   box-shadow: none;
   outline: none;
+}
+
+/* Bottom Decorative Ornament */
+.varmala-bottom-ornament-wrap {
+  width: 82px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 64px auto 30px;
+  transform: rotate(0deg);
+  opacity: 1;
+}
+
+.varmala-bottom-ornament-img {
+  width: 82px;
+  height: 35px;
+  object-fit: contain;
+  display: block;
+  transform: rotate(0deg);
+  opacity: 1;
 }
 
 /* Responsive Scaling */

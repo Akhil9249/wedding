@@ -1,7 +1,8 @@
 import React from 'react';
 import './Events.css';
 import bgImg from '../../assets/images/bg.png';
-import fountainGif from '../../assets/images/fountain_transparent.gif';
+import poolsideImg from '../../assets/images/poolside.png';
+import ornamentImg from '../../assets/images/ornament.png';
 
 export default function Events() {
   return (
@@ -12,6 +13,18 @@ export default function Events() {
       <div className="event-overlay" aria-hidden="true"></div>
 
       <div className="event-content">
+        {/* Top Decorative Ornament */}
+        <div className="pool-ornament-wrap">
+          <img 
+            src={ornamentImg} 
+            alt="" 
+            className="pool-ornament-img"
+            width="82"
+            height="35"
+            aria-hidden="true" 
+          />
+        </div>
+
         {/* Intro Quote */}
         <p className="pool-tagline">
           A little sunshine and a whole lot of poolside fun!
@@ -25,7 +38,7 @@ export default function Events() {
         {/* Date & Time */}
         <div className="pool-schedule">
           <p className="schedule-date">Date: Monday, 4th January 2027</p>
-          <p className="schedule-time">Time: 11:30am</p>
+          <p className="schedule-time">Time: 10:00 AM</p>
         </div>
 
         {/* Venue Button */}
@@ -43,14 +56,14 @@ export default function Events() {
           </a>
         </div>
 
-        {/* Animated Fountain & Pool GIF */}
+        {/* Poolside & Fountain Illustration */}
         <div className="pool-illustration-wrapper">
           <img 
-            src={fountainGif} 
+            src={poolsideImg} 
             alt="Summer Daydream poolside and fountain illustration" 
             className="pool-illustration-img"
-            width="402"
-            height="388"
+            width="576"
+            height="531"
             loading="eager"
           />
         </div>

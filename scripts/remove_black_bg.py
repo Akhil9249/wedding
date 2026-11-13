@@ -6,7 +6,7 @@ from collections import deque
 def process_gif():
     input_path = r'C:\Users\akhil\Downloads\fountain_top_to_bottom_flow.gif'
     if not os.path.exists(input_path):
-        input_path = r'src/assets/images/fountain_transparent.gif'
+        input_path = r'src/assets/gif/fountain_transparent.gif'
     
     im = Image.open(input_path)
     print(f"Loaded {input_path}: {im.size}, {im.n_frames} frames")
@@ -92,7 +92,7 @@ def process_gif():
         p_rgb.info['transparency'] = 255
         gif_frames.append(p_rgb)
         
-    output_path = r'src/assets/images/fountain_transparent.gif'
+    output_path = r'src/assets/gif/fountain_transparent.gif'
     gif_frames[0].save(
         output_path,
         save_all=True,

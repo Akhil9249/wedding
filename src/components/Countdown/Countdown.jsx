@@ -1,6 +1,7 @@
 import React from 'react';
 import './Countdown.css';
 import bgImg from '../../assets/images/bg.png';
+import ornamentImg from '../../assets/images/ornament.png';
 import sangeetImg from '../../assets/images/sangeet.png';
 import { weddingData } from '../../data/weddingData';
 
@@ -15,6 +16,18 @@ export default function Countdown({ data }) {
       <div className="sangeet-overlay" aria-hidden="true"></div>
 
       <div className="sangeet-content">
+        {/* Top Decorative Ornament */}
+        <div className="sangeet-ornament-wrap">
+          <img
+            src={ornamentImg}
+            alt=""
+            className="sangeet-ornament-img"
+            width="82"
+            height="35"
+            aria-hidden="true"
+          />
+        </div>
+
         {/* Intro Tagline */}
         <p className="sangeet-tagline">
           {event?.tagline || "Come ready to dance, celebrate, and keep the party going all night long!"}
@@ -29,7 +42,7 @@ export default function Countdown({ data }) {
         {/* Date & Time */}
         <div className="sangeet-schedule">
           <p className="schedule-date">{event?.date || "Date: Monday, 4th January 2027"}</p>
-          <p className="schedule-time">{event?.time || "Time: 7:00pm"}</p>
+          <p className="schedule-time">{event?.time || "Time: 7:00 PM"}</p>
         </div>
 
         {/* Venue Button */}

@@ -1,9 +1,9 @@
 import React from 'react';
 import './Couple.css';
-import leavesFlutterWebp from '../../assets/images/leaves_flutter_all.webp';
-import leavesFlutterGif from '../../assets/images/leaves_flutter_all.gif';
+import coupleIllustrationImg from '../../assets/images/couple/couple-illustration.png';
 import coupleBg from '../../assets/images/couple-bg.jpg';
 import ornamentImg from '../../assets/images/ornament.png';
+import thirukalyanamImg from '../../assets/images/couple/Thirukalyanam.svg';
 
 export default function Couple({ couple }) {
   return (
@@ -20,6 +20,8 @@ export default function Couple({ couple }) {
             src={ornamentImg} 
             alt="" 
             className="thirukalyanam-ornament-img" 
+            width="82"
+            height="35"
             aria-hidden="true" 
           />
         </div>
@@ -31,7 +33,15 @@ export default function Couple({ couple }) {
         </p>
 
         {/* Ceremony Titles */}
-        <h2 className="thirukalyanam-title scroll-reveal">Thirukalyanam</h2>
+        <h2 className="thirukalyanam-title scroll-reveal">
+          <img 
+            src={thirukalyanamImg} 
+            alt="Thirukalyanam" 
+            className="thirukalyanam-title-img"
+            width="193"
+            height="44"
+          />
+        </h2>
         <p className="thirukalyanam-subtitle scroll-reveal">(Guruvayur Thalikettu)</p>
 
         {/* Date & Muhurtham */}
@@ -55,17 +65,14 @@ export default function Couple({ couple }) {
 
         {/* Couple Traditional Illustration */}
         <div className="illustration-wrapper scroll-reveal">
-          <picture className="couple-illustration-picture">
-            <source srcSet={leavesFlutterWebp} type="image/webp" />
-            <img
-              src={leavesFlutterGif}
-              alt="Thirukalyanam couple traditional attire illustration"
-              className="couple-illustration"
-              width="402"
-              height="511"
-              loading="eager"
-            />
-          </picture>
+          <img
+            src={coupleIllustrationImg}
+            alt="Thirukalyanam couple traditional attire illustration"
+            className="couple-illustration"
+            width="402"
+            height="511"
+            loading="eager"
+          />
         </div>
 
         {/* Bottom Decorative Ornament */}
