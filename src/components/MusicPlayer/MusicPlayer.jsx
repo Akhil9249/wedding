@@ -11,6 +11,26 @@ export default function MusicPlayer() {
   const audioRef = useRef(null);
   const userMutedRef = useRef(false);
 
+  // Play music function
+  const playMusic = useCallback(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
+    if (userMutedRef.current) return;
+
+    audio.muted = false;
+    const playPromise = audio.play();
+    if (playPromise !== undefined) {
+      playPromise
+        .then(() => {
+          setIsPlaying(true);
+          setIsMuted(false);
+        })
+        .catch(() => {
+          // Playback deferred until user interaction
+        });
+    }
+  }, []);
+
   useEffect(() => {
     const audio = audioRef.current;
     if (!audio) return;
@@ -28,8 +48,35 @@ export default function MusicPlayer() {
       setIsMuted(true);
     });
 
-    // Events that indicate initial scroll or interaction
-    const SCROLL_AND_INTERACTION_EVENTS = [
+    // Handle scroll and page interaction to trigger music playback
+    const handleScrollOrInteraction = (e) => {
+      // Do not trigger if interacting with the music button directly
+      if (e && e.target && e.target.closest && e.target.closest('.music-player-fab')) {
+        return;
+      }
+      if (userMutedRef.current) return;
+
+      // When user scrolls or interacts, unmute and play music
+      if (audio.muted || audio.paused) {
+        audio.muted = false;
+        const playPromise = audio.play();
+        if (playPromise !== undefined) {
+          playPromise
+            .then(() => {
+              setIsPlaying(true);
+              setIsMuted(false);
+            })
+            .catch(() => {
+              // Browser Autoplay Policy requires a user gesture (click/tap) before allowing sound.
+              // Revert to muted playback silently so audio keeps buffering/playing in background.
+              audio.muted = true;
+              audio.play().catch(() => {});
+            });
+        }
+      }
+    };
+
+    const SCROLL_EVENTS = [
       'scroll',
       'wheel',
       'touchmove',
@@ -39,58 +86,16 @@ export default function MusicPlayer() {
       'keydown'
     ];
 
-    const removeScrollListeners = () => {
-      SCROLL_AND_INTERACTION_EVENTS.forEach((eventName) => {
-        window.removeEventListener(eventName, handleInitialScroll, true);
-        document.removeEventListener(eventName, handleInitialScroll, true);
-      });
-    };
-
-    const handleInitialScroll = (e) => {
-      // Ignore clicks/touches on the music button itself to avoid double-toggling
-      if (e && e.target && e.target.closest && e.target.closest('.music-player-fab')) {
-        return;
-      }
-
-      if (!audio) return;
-      if (userMutedRef.current) {
-        removeScrollListeners();
-        return;
-      }
-
-      // Automatically unmute audio when user starts scrolling or interacting with the page
-      audio.muted = false;
-      const playPromise = audio.play();
-
-      if (playPromise !== undefined) {
-        playPromise
-          .then(() => {
-            setIsMuted(false);
-            setIsPlaying(true);
-            removeScrollListeners();
-          })
-          .catch(() => {
-            // If browser blocks unmuted playback on desktop mouse-wheel,
-            // keep audio playing in muted mode and wait for first tap/click
-            audio.muted = true;
-            audio.play().catch(() => {});
-          });
-      } else {
-        setIsMuted(false);
-        setIsPlaying(true);
-        removeScrollListeners();
-      }
-    };
-
-    // Attach scroll and interaction listeners
-    SCROLL_AND_INTERACTION_EVENTS.forEach((eventName) => {
-      window.addEventListener(eventName, handleInitialScroll, { capture: true, passive: true });
-      document.addEventListener(eventName, handleInitialScroll, { capture: true, passive: true });
+    SCROLL_EVENTS.forEach((eventName) => {
+      window.addEventListener(eventName, handleScrollOrInteraction, { capture: true, passive: true });
+      document.addEventListener(eventName, handleScrollOrInteraction, { capture: true, passive: true });
     });
 
     // Native audio event sync
     const onPlay = () => setIsPlaying(true);
-    const onPause = () => setIsPlaying(false);
+    const onPause = () => {
+      if (userMutedRef.current) setIsPlaying(false);
+    };
     const onVolumeChange = () => {
       setIsMuted(audio.muted || audio.volume === 0);
     };
@@ -100,10 +105,13 @@ export default function MusicPlayer() {
     audio.addEventListener('volumechange', onVolumeChange);
 
     return () => {
+      SCROLL_EVENTS.forEach((eventName) => {
+        window.removeEventListener(eventName, handleScrollOrInteraction, true);
+        document.removeEventListener(eventName, handleScrollOrInteraction, true);
+      });
       audio.removeEventListener('play', onPlay);
       audio.removeEventListener('pause', onPause);
       audio.removeEventListener('volumechange', onVolumeChange);
-      removeScrollListeners();
     };
   }, []);
 
@@ -124,17 +132,11 @@ export default function MusicPlayer() {
       audio.muted = true;
       setIsMuted(true);
     } else {
-      // User explicitly clicked unmute
+      // User explicitly clicked unmute / play
       userMutedRef.current = false;
-      audio.muted = false;
-      audio.play().then(() => {
-        setIsPlaying(true);
-        setIsMuted(false);
-      }).catch((err) => {
-        console.warn('Playback error:', err);
-      });
+      playMusic();
     }
-  }, []);
+  }, [playMusic]);
 
   const isAudible = isPlaying && !isMuted;
 
@@ -185,7 +187,7 @@ export default function MusicPlayer() {
           )}
         </span>
         <span className="music-tooltip">
-          {isAudible ? 'Mute Music' : 'Unmute Music'}
+          {isAudible ? 'Mute Music' : 'Play Music'}
         </span>
       </button>
 
