@@ -18,6 +18,7 @@
   max-width: var(--content-max-width, 404px);
   min-height: 100vh;
   background-color: #fcfbf7;
+  background-image: url('./assets/images/bg.png');
   background-repeat: repeat-y;
   background-size: 100% auto;
   background-position: top center;
@@ -28,6 +29,21 @@
   border-right: 1px solid rgba(197, 155, 39, 0.2);
   -ms-overflow-style: none;
   scrollbar-width: none;
+  color: #000000;
+}
+
+/* Ensure all font in invitation-container and child components is pure black */
+.invitation-container h1,
+.invitation-container h2,
+.invitation-container h3,
+.invitation-container h4,
+.invitation-container h5,
+.invitation-container h6,
+.invitation-container p,
+.invitation-container span:not(.music-player-container *):not(.reception-footer *),
+.invitation-container a:not(.music-player-container *):not(.reception-footer *),
+.invitation-container div:not(.music-player-container *):not(.reception-footer *) {
+  color: #000000;
 }
 
 .invitation-container::-webkit-scrollbar {
@@ -46,7 +62,7 @@
 .footer-wishes {
   font-family: var(--font-script, cursive);
   font-size: 2.2rem;
-  color: var(--primary-burgundy, #7a1f36);
+  color: #000000;
   margin-bottom: 8px;
 }
 
@@ -54,5 +70,5 @@
   font-family: var(--font-heading, serif);
   font-size: 0.75rem;
   letter-spacing: 2px;
-  color: var(--accent-gold, #c59b27);
+  color: #000000;
 }

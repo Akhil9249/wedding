@@ -7,7 +7,7 @@
 }
 
 .gold-highlight {
-  color: var(--accent-gold, #c59b27);
+  color: #000000;
   font-weight: 700;
 }
 
@@ -19,12 +19,12 @@
 
 .event-date-time.highlight {
   font-size: 1.05rem;
-  color: var(--primary-burgundy, #7a1f36);
+  color: #000000;
 }
 
 .gold-tag {
   background: var(--accent-gold, #c59b27);
-  color: #fff;
+  color: #000000;
   border: none;
 }
 

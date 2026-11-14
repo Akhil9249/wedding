@@ -1,6 +1,5 @@
 import React from 'react';
 import './WelcomeDinner.css';
-import bgImg from '../../assets/images/bg.png';
 import welcomeDinnerImg from '../../assets/images/welcome-dinner.png';
 import { weddingData } from '../../data/weddingData';
 
@@ -19,7 +18,6 @@ export default function WelcomeDinner({ data }) {
   return (
     <section
       className="wedding-welcome-dinner"
-      style={{ backgroundImage: `url(${bgImg})` }}
     >
       <div className="welcome-dinner-overlay" aria-hidden="true"></div>
 

@@ -38,7 +38,7 @@ export const weddingData = {
     mapUrl: "https://maps.google.com/?q=Ashirvadh+Nature+Resort+Wayanad"
   },
   mangalaDarshanam: {
-    tagline: "As two families come together, let us celebrate the richness of our traditions, the warmth of togetherness and the timeless flavours of Kerala",
+    tagline: "As two families come together, let us celebrate the\nrichness of our traditions, the warmth of togetherness\nand the timeless flavours of Kerala",
     title: "Naadan Virunnu",
     subtitle: "(A Festive Feast)",
     date: "Date: Tuesday, 5th January 2027",
@@ -47,11 +47,11 @@ export const weddingData = {
     mapUrl: "https://maps.google.com/?q=Ashirvadh+Nature+Resort+Wayanad"
   },
   varmala: {
-    tagline: "Witness an evening of sacred vows and promises for a lifetime",
+    tagline: "Witness an evening of sacred vows and\npromises for a lifetime",
     title: "Varmala",
     subtitle: "(Wedding)",
     date: "Date: Tuesday, 5th January 2027",
-    time: "Time: 3:30pm",
+    time: "Time: 3:30 PM",
     venue: "Venue: Amphitheatre, Ashirvadh Nature Resort, Wayanad",
     mapUrl: "https://maps.google.com/?q=Ashirvadh+Nature+Resort+Wayanad"
   },
@@ -68,12 +68,12 @@ export const weddingData = {
     bride: {
       firstName: "Manisha",
       fullName: "Manisha Sharma",
-      parents: "Daughter of Smt.Maya &\u00A0 Shri.Murali"
+      parents: "Daughter of Smt\u00A0 Maya &\u00A0 Shri\u00A0 Murali"
     },
     groom: {
       firstName: "Neel",
       fullName: "Neel Patel",
-      parents: "Son of Smt.Sheena &\u00A0 Shri.Premchandran"
+      parents: "Son of Smt\u00A0 Sheena &\u00A0 Shri\u00A0 Premchandran"
     },
     tagline: "Together with their families invite you to celebrate their wedding"
   },

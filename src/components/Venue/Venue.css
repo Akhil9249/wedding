@@ -1,9 +1,7 @@
 .wedding-darshanam {
   text-align: center;
   padding: 0 16px 0;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: transparent;
   position: relative;
   overflow: hidden;
   border: none;
@@ -31,7 +29,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 44px auto 0;
+  margin: 19px auto 0;
   transform: rotate(0deg);
   opacity: 1;
 }
@@ -51,19 +49,14 @@
   font-weight: 400;
   font-style: normal;
   font-size: 20px;
-  line-height: 100%;
+  line-height: 1.28;
   letter-spacing: 0%;
   text-align: center;
   color: #000000;
-  width: 281px;
-  max-width: 100%;
-  height: 75px;
-  margin: 44px auto 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transform: rotate(0deg);
-  opacity: 1;
+  width: 295px;
+  max-width: 95%;
+  margin: 36px auto 0;
+  display: block;
   box-sizing: border-box;
 }
 
@@ -222,6 +215,7 @@
   outline: none;
   display: flex;
   justify-content: center;
+  position: relative;
 }
 
 .darshanam-illustration-img {
@@ -233,29 +227,106 @@
   outline: none;
 }
 
-/* Bottom Decorative Ornament */
-.darshanam-bottom-ornament-wrap {
-  width: 82px;
-  height: 35px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 54px auto 32px;
-  transform: rotate(0deg);
-  opacity: 1;
+/* Animated Flying Parrot Container */
+.darshanam-parrot-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 5;
+  overflow: visible;
 }
 
-.darshanam-bottom-ornament-img {
-  width: 82px;
-  height: 35px;
-  object-fit: contain;
+/* Macro Flight Path: Natural Undulating Flight along User's Diagonal at 100% Constant Forward Speed */
+.darshanam-parrot-flight-path {
+  position: absolute;
+  top: 95px;
+  left: -15%;
+  width: 54px;
+  height: auto;
+  will-change: transform, left, top;
+  transform-origin: 50% 50%;
+  animation: parrotFlyAlongLine 5.6s linear -1.8s infinite;
+}
+
+/* Micro Flap Bobbing: Natural Aerodynamic Wingbeat Lift & Breathing synchronized with 765ms WebP cycle */
+.darshanam-parrot-bob {
+  will-change: transform;
+  animation: parrotFlapBob 0.765s ease-in-out infinite;
+  transform-origin: 45% 45%;
+}
+
+/* Rendered Parrot Image */
+.darshanam-flying-parrot-img {
+  width: 54px;
+  height: auto;
   display: block;
-  transform: rotate(0deg);
-  opacity: 1;
+  filter: drop-shadow(0 3px 6px rgba(44, 25, 10, 0.2));
+}
+
+/* Flap Bob Keyframes: Aerodynamic downstroke lift + glide */
+@keyframes parrotFlapBob {
+  0%, 100% {
+    transform: translateY(0px) rotateZ(0deg) scale(1);
+  }
+  32% {
+    transform: translateY(-4px) rotateZ(-2deg) scale(1.025);
+  }
+  70% {
+    transform: translateY(1.5px) rotateZ(1.5deg) scale(0.985);
+  }
+}
+
+/* Flight Path along User's Line with Natural Undulating Wave & 100% Constant Horizontal Velocity */
+@keyframes parrotFlyAlongLine {
+  0% {
+    left: -15%;
+    top: 95px;
+    transform: rotateZ(-18deg);
+    opacity: 1;
+  }
+  20% {
+    left: 11%;
+    top: 62px;
+    transform: rotateZ(-22deg);
+    opacity: 1;
+  }
+  40% {
+    left: 37%;
+    top: 32px;
+    transform: rotateZ(-17deg);
+    opacity: 1;
+  }
+  60% {
+    left: 63%;
+    top: -6px;
+    transform: rotateZ(-23deg);
+    opacity: 1;
+  }
+  80% {
+    left: 89%;
+    top: -48px;
+    transform: rotateZ(-19deg);
+    opacity: 1;
+  }
+  100% {
+    left: 115%;
+    top: -85px;
+    transform: rotateZ(-16deg);
+    opacity: 1;
+  }
 }
 
 /* Responsive Scaling */
 @media (max-width: 480px) {
+  .darshanam-parrot-flight-path {
+    width: 48px;
+  }
+  .darshanam-flying-parrot-img {
+    width: 48px;
+  }
   .darshanam-venue-text {
     font-size: 12px;
   }
@@ -274,7 +345,6 @@
   .darshanam-title {
     font-size: 34px;
   }
-  .darshanam-tagline,
   .darshanam-subtitle {
     font-size: 18px;
   }

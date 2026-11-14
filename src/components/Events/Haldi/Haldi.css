@@ -8,14 +8,14 @@
   font-family: var(--font-heading, serif);
   font-size: 0.75rem;
   letter-spacing: 2px;
-  color: var(--accent-gold, #c59b27);
+  color: #000000;
   margin-bottom: 8px;
 }
 
 .event-title {
   font-family: var(--font-script, cursive);
   font-size: 2.6rem;
-  color: var(--primary-burgundy, #7a1f36);
+  color: #000000;
   margin: 0 0 4px;
 }
 
@@ -23,7 +23,7 @@
   font-family: var(--font-body, serif);
   font-size: 1.05rem;
   font-style: italic;
-  color: var(--text-muted, #666);
+  color: #000000;
   margin: 0 0 18px;
 }
 
@@ -50,13 +50,13 @@
   font-family: var(--font-heading, serif);
   font-size: 0.95rem;
   font-weight: 600;
-  color: var(--primary-burgundy, #7a1f36);
+  color: #000000;
   margin-bottom: 6px;
 }
 
 .event-venue {
   font-size: 0.9rem;
-  color: var(--text-dark, #333);
+  color: #000000;
   margin-bottom: 8px;
 }
 
@@ -64,7 +64,7 @@
   font-family: var(--font-body, serif);
   font-size: 0.95rem;
   line-height: 1.45;
-  color: var(--text-muted, #555);
+  color: #000000;
   margin-bottom: 12px;
 }
 
@@ -72,7 +72,7 @@
   display: inline-block;
   font-size: 0.8rem;
   font-family: var(--font-heading, serif);
-  color: var(--accent-gold, #c59b27);
+  color: #000000;
   background: rgba(197, 155, 39, 0.1);
   padding: 4px 12px;
   border-radius: 16px;

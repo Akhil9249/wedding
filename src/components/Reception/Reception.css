@@ -1,9 +1,7 @@
 .wedding-reception {
   text-align: center;
   padding: 0 16px 0;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: transparent;
   position: relative;
   overflow: hidden;
   border: none;
@@ -65,6 +63,23 @@
 }
 
 /* Event Title */
+.reception-title-wrap {
+  width: 330px;
+  max-width: 92%;
+  margin: 32px auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.reception-title-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
 .reception-title {
   font-family: 'Perfecto Calligraphy - Personal use', 'Perfecto Calligraphy', var(--font-script, 'Great Vibes'), cursive;
   font-weight: 400;
@@ -209,35 +224,65 @@
 .reception-footer {
   margin: 28px -16px 0;
   width: calc(100% + 32px);
-  background: rgba(245, 235, 228, 0.85);
-  border-top: 1px solid rgba(44, 25, 10, 0.15);
+  background: #F3E8DD;
+  border-top: none;
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  padding: 8px 10px;
+  justify-content: space-between;
+  padding: 8px 14px;
   box-sizing: border-box;
+  white-space: nowrap;
 }
 
 .footer-brand {
-  font-family: 'Cinzel', 'Poppins', Georgia, serif;
-  font-size: 11px;
-  font-weight: 700;
-  color: #2A0F32;
-  letter-spacing: 0.5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  line-height: 134%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #2C190A;
   white-space: nowrap;
+}
+
+.footer-brand .brand-bold {
+  font-weight: 500;
+  color: #2C190A;
+}
+
+.footer-brand .brand-light {
+  font-weight: 300;
+  color: #2C190A;
 }
 
 .footer-link {
   display: inline-flex;
   align-items: center;
-  gap: 4px;
+  gap: 5px;
   font-family: 'Poppins', sans-serif;
-  font-size: 10px;
-  color: #2A0F32;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 134%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #000000;
   text-decoration: none;
-  letter-spacing: 0.2px;
   white-space: nowrap;
   transition: opacity 0.2s ease, text-decoration 0.2s ease;
+}
+
+.footer-link span {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 134%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #000000;
 }
 
 .footer-link:hover {
@@ -247,7 +292,18 @@
 
 .footer-icon {
   flex-shrink: 0;
-  opacity: 0.85;
+  opacity: 0.9;
+  color: #000000;
+}
+
+.globe-icon {
+  width: 14px;
+  height: 14px;
+}
+
+.phone-icon {
+  width: 13px;
+  height: 13px;
 }
 
 /* Responsive Scaling */
@@ -272,6 +328,10 @@
     font-size: 34px;
     margin-top: 28px;
   }
+  .reception-title-wrap {
+    width: 290px;
+    margin-top: 24px;
+  }
   .reception-subtitle {
     font-size: 18px;
     margin-top: 18px;
@@ -293,14 +353,22 @@
   .reception-illustration-wrapper {
     margin-top: 28px;
   }
+  .reception-footer {
+    padding: 7px 10px;
+  }
   .footer-brand {
-    font-size: 9.5px;
+    font-size: 12px;
   }
-  .footer-link {
-    font-size: 8.5px;
-    gap: 2px;
+  .footer-link,
+  .footer-link span {
+    font-size: 11px;
+    gap: 3px;
   }
-  .footer-icon {
+  .globe-icon {
+    width: 12px;
+    height: 12px;
+  }
+  .phone-icon {
     width: 11px;
     height: 11px;
   }
@@ -314,6 +382,25 @@
   }
   .reception-venue-text {
     font-size: 10.5px;
+  }
+  .reception-footer {
+    padding: 6px 8px;
+  }
+  .footer-brand {
+    font-size: 10.5px;
+  }
+  .footer-link,
+  .footer-link span {
+    font-size: 10px;
+    gap: 2px;
+  }
+  .globe-icon {
+    width: 11px;
+    height: 11px;
+  }
+  .phone-icon {
+    width: 10px;
+    height: 10px;
   }
 }
 

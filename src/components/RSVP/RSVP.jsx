@@ -1,6 +1,5 @@
 import React from 'react';
 import './RSVP.css';
-import bgImg from '../../assets/images/bg.png';
 import varmalaImg from '../../assets/images/varmala.png';
 import ornamentImg from '../../assets/images/ornament.png';
 import { weddingData } from '../../data/weddingData';
@@ -11,14 +10,37 @@ export default function RSVP({ data }) {
   return (
     <section 
       className="wedding-varmala"
-      style={{ backgroundImage: `url(${bgImg})` }}
     >
       <div className="varmala-overlay" aria-hidden="true"></div>
 
       <div className="varmala-content scroll-reveal">
+        {/* Top Decorative Ornament */}
+        <div className="varmala-ornament-wrap">
+          <img
+            src={ornamentImg}
+            alt=""
+            className="varmala-ornament-img"
+            width="82"
+            height="35"
+            aria-hidden="true"
+          />
+        </div>
+
         {/* Intro Tagline */}
         <p className="varmala-tagline">
-          {event?.tagline || "Witness an evening of sacred vows and promises for a lifetime"}
+          {typeof event?.tagline === 'string' && event.tagline.includes('\n') ? (
+            event.tagline.split('\n').map((line, i) => (
+              <React.Fragment key={i}>
+                {line}
+                {i === 0 && <br />}
+              </React.Fragment>
+            ))
+          ) : (
+            <>
+              Witness an evening of sacred vows and<br />
+              promises for a lifetime
+            </>
+          )}
         </p>
 
         {/* Event Title */}
@@ -55,7 +77,7 @@ export default function RSVP({ data }) {
             alt="Varmala wedding mandap and couple illustration" 
             className="varmala-illustration-img"
             width="402"
-            height="457"
+            height="459"
             loading="eager"
           />
         </div>

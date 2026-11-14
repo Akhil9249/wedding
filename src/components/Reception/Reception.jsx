@@ -1,9 +1,9 @@
 import React from 'react';
 import './Reception.css';
-import bgImg from '../../assets/images/bg.png';
 import bellLeftImg from '../../assets/images/bell-left.png';
 import bellRightImg from '../../assets/images/bell-right.png';
 import receptionImg from '../../assets/images/reception.png';
+import receptionTitleImg from '../../assets/images/the-beginning-of-always.png';
 import { weddingData } from '../../data/weddingData';
 
 export default function Reception({ data }) {
@@ -12,7 +12,6 @@ export default function Reception({ data }) {
   return (
     <section 
       className="wedding-reception"
-      style={{ backgroundImage: `url(${bgImg})` }}
       aria-label="Wedding Reception Event"
     >
       <div className="reception-overlay" aria-hidden="true"></div>
@@ -45,9 +44,15 @@ export default function Reception({ data }) {
         </p>
 
         {/* Event Title */}
-        <h2 className="reception-title">
-          {event?.title || "The Beginning of Always"}
-        </h2>
+        <div className="reception-title-wrap">
+          <img 
+            src={receptionTitleImg} 
+            alt={event?.title || "The Beginning of Always"} 
+            className="reception-title-img"
+            width="1324"
+            height="216"
+          />
+        </div>
 
         {/* Event Subtitle */}
         <p className="reception-subtitle">
@@ -89,7 +94,9 @@ export default function Reception({ data }) {
 
         {/* Bottom Credits Footer Bar */}
         <footer className="reception-footer">
-          <span className="footer-brand">Urban Knots</span>
+          <span className="footer-brand">
+            <span className="brand-bold">Urban</span> <span className="brand-light">Knots</span>
+          </span>
           <a 
             href="https://www.urbanknotsllp.com" 
             target="_blank" 
@@ -97,7 +104,7 @@ export default function Reception({ data }) {
             className="footer-link"
             aria-label="Visit Urban Knots website"
           >
-            <svg className="footer-icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <svg className="footer-icon globe-icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
               <circle cx="12" cy="12" r="10"></circle>
               <line x1="2" y1="12" x2="22" y2="12"></line>
               <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
@@ -109,8 +116,8 @@ export default function Reception({ data }) {
             className="footer-link"
             aria-label="Call Urban Knots"
           >
-            <svg className="footer-icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            <svg className="footer-icon phone-icon" viewBox="0 0 24 24" width="12" height="12" fill="currentColor" aria-hidden="true">
+              <path d="M6.62 10.79a15.053 15.053 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24 11.72 11.72 0 0 0 3.68.59 1 1 0 0 1 1 1v3.5a1 1 0 0 1-1 1A17.93 17.93 0 0 1 2 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.72 11.72 0 0 0 .59 3.68 1 1 0 0 1-.24 1.02l-2.23 2.09z"/>
             </svg>
             <span>+91 812 919 5151</span>
           </a>

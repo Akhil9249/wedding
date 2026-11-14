@@ -1,9 +1,7 @@
 .wedding-varmala {
   text-align: center;
   padding: 0 16px 0;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: transparent;
   position: relative;
   overflow: hidden;
   border: none;
@@ -24,19 +22,40 @@
   margin: 0 auto;
 }
 
+/* Top Decorative Ornament */
+.varmala-ornament-wrap {
+  width: 82px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 44px auto 0;
+  transform: rotate(0deg);
+  opacity: 1;
+}
+
+.varmala-ornament-img {
+  width: 82px;
+  height: 35px;
+  object-fit: contain;
+  display: block;
+  transform: rotate(0deg);
+  opacity: 1;
+}
+
 /* Tagline */
 .varmala-tagline {
   font-family: 'Italianno', cursive;
   font-weight: 400;
   font-style: normal;
   font-size: 20px;
-  line-height: 1.35;
+  line-height: 1.25;
   letter-spacing: 0%;
   text-align: center;
-  color: #2A0F32;
-  width: 380px;
+  color: #000000;
+  width: 290px;
   max-width: 95%;
-  margin: 60px auto 0;
+  margin: 16px auto 0;
   display: block;
   box-sizing: border-box;
 }
@@ -50,7 +69,7 @@
   line-height: 1.15;
   letter-spacing: 0%;
   text-align: center;
-  color: #2A0F32;
+  color: #000000;
   margin: 14px auto 0;
   display: block;
   box-sizing: border-box;
@@ -65,7 +84,7 @@
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  color: #2A0F32;
+  color: #000000;
   margin: 6px auto 0;
   display: block;
   box-sizing: border-box;
@@ -90,7 +109,7 @@
   line-height: 18px;
   letter-spacing: 0%;
   text-align: center;
-  color: #2A0F32;
+  color: #000000;
   margin: 0;
 }
 
@@ -160,14 +179,14 @@
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  color: #2C190A;
+  color: #000000;
   display: inline-block;
   white-space: nowrap;
 }
 
 /* Golden Mandap & Couple Illustration (Full Edge-to-Edge Width) */
 .varmala-illustration-wrapper {
-  margin: 42px -16px 0;
+  margin: 24px -16px 0;
   width: calc(100% + 32px);
   max-width: none;
   border: none;

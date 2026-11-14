@@ -1,9 +1,9 @@
 import React from 'react';
 import './Venue.css';
-import bgImg from '../../assets/images/bg.png';
 import ornamentImg from '../../assets/images/ornament.png';
 import naadanVirunnuImg from '../../assets/images/naadan-virunnu.png';
 import kerala01Img from '../../assets/images/kerala01.png';
+import flyingParrotImg from '../../assets/images/flying-parrot-right.webp';
 import { weddingData } from '../../data/weddingData';
 
 export default function Venue({ data, venue }) {
@@ -12,7 +12,7 @@ export default function Venue({ data, venue }) {
   return (
     <section 
       className="wedding-darshanam"
-      style={{ backgroundImage: `url(${bgImg})` }}
+      id="venue"
     >
       <div className="darshanam-overlay" aria-hidden="true"></div>
 
@@ -31,7 +31,20 @@ export default function Venue({ data, venue }) {
 
         {/* Intro Tagline */}
         <p className="darshanam-tagline">
-          {event?.tagline || "As two families come together, let us celebrate the richness of our traditions, the warmth of togetherness and the timeless flavours of Kerala"}
+          {typeof event?.tagline === 'string' && event.tagline.includes('\n') ? (
+            event.tagline.split('\n').map((line, i, arr) => (
+              <React.Fragment key={i}>
+                {line}
+                {i < arr.length - 1 && <br />}
+              </React.Fragment>
+            ))
+          ) : (
+            <>
+              As two families come together, let us celebrate the<br />
+              richness of our traditions, the warmth of togetherness<br />
+              and the timeless flavours of Kerala
+            </>
+          )}
         </p>
 
         {/* Event Title */}
@@ -72,6 +85,22 @@ export default function Venue({ data, venue }) {
 
         {/* Kerala Festive Procession & Elephant Illustration */}
         <div className="darshanam-illustration-wrapper">
+          {/* Animated Flying Parrot */}
+          <div className="darshanam-parrot-container" aria-hidden="true">
+            <div className="darshanam-parrot-flight-path">
+              <div className="darshanam-parrot-bob">
+                <img 
+                  src={flyingParrotImg} 
+                  alt="" 
+                  className="darshanam-flying-parrot-img"
+                  width="349"
+                  height="351"
+                  loading="eager"
+                />
+              </div>
+            </div>
+          </div>
+
           <img 
             src={kerala01Img} 
             alt="Naadan Virunnu Kerala festive procession illustration" 
@@ -79,18 +108,6 @@ export default function Venue({ data, venue }) {
             width="402"
             height="548"
             loading="eager"
-          />
-        </div>
-
-        {/* Bottom Decorative Ornament */}
-        <div className="darshanam-bottom-ornament-wrap">
-          <img
-            src={ornamentImg}
-            alt=""
-            className="darshanam-bottom-ornament-img"
-            width="82"
-            height="35"
-            aria-hidden="true"
           />
         </div>
       </div>

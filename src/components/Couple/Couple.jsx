@@ -1,15 +1,15 @@
 import React from 'react';
 import './Couple.css';
 import coupleIllustrationImg from '../../assets/images/couple/couple-illustration.png';
-import coupleBg from '../../assets/images/couple-bg.jpg';
 import ornamentImg from '../../assets/images/ornament.png';
 import thirukalyanamImg from '../../assets/images/couple/Thirukalyanam.svg';
+import perchedParrotImg from '../../assets/images/perched-parrot.webp';
+import flyingParrotImg from '../../assets/images/flying-parrot.webp';
 
 export default function Couple({ couple }) {
   return (
     <section 
       className="wedding-couple"
-      style={{ backgroundImage: `url(${coupleBg})` }}
     >
       <div className="couple-overlay" aria-hidden="true"></div>
       
@@ -65,6 +65,30 @@ export default function Couple({ couple }) {
 
         {/* Couple Traditional Illustration */}
         <div className="illustration-wrapper scroll-reveal">
+          {/* Animated Pillar Parrot */}
+          <div className="couple-parrot-container" aria-hidden="true">
+            <div className="couple-parrot-flight-path">
+              <div className="couple-parrot-bob">
+                <img
+                  src={perchedParrotImg}
+                  alt=""
+                  className="couple-parrot-perched-img"
+                  width="349"
+                  height="351"
+                  loading="eager"
+                />
+                <img
+                  src={flyingParrotImg}
+                  alt=""
+                  className="couple-parrot-flying-img"
+                  width="349"
+                  height="351"
+                  loading="eager"
+                />
+              </div>
+            </div>
+          </div>
+
           <img
             src={coupleIllustrationImg}
             alt="Thirukalyanam couple traditional attire illustration"

@@ -1,0 +1,129 @@
+/* Container spans the invitation viewport, centered over the card */
+.falling-petals-container {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: var(--content-max-width, 404px);
+  height: 100vh;
+  pointer-events: none;
+  z-index: 99;
+  overflow: hidden;
+}
+
+/* Individual falling leaf wrapper (controls continuous vertical fall) */
+.leaf-wrapper {
+  position: absolute;
+  top: -65px;
+  will-change: transform;
+  animation-name: leafFall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+/* Leaf flipper (controls horizontal sway, tilt and 3D tumbling) */
+.leaf-flipper {
+  display: block;
+  transform-style: preserve-3d;
+  will-change: transform;
+  filter: drop-shadow(0 2px 5px rgba(180, 50, 75, 0.25));
+}
+
+.leaf-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Vertical Falling Animation */
+@keyframes leafFall {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(calc(100vh + 90px));
+  }
+}
+
+/* Sway Variation 1: Natural leaf drift with rightward swoop and tilt */
+.leaf-sway-1 {
+  animation-name: leafSway1;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes leafSway1 {
+  0%, 100% {
+    transform: translateX(0) rotateZ(-15deg) rotateY(0deg) rotateX(0deg);
+  }
+  25% {
+    transform: translateX(22px) rotateZ(35deg) rotateY(50deg) rotateX(20deg);
+  }
+  50% {
+    transform: translateX(6px) rotateZ(75deg) rotateY(100deg) rotateX(45deg);
+  }
+  75% {
+    transform: translateX(-18px) rotateZ(115deg) rotateY(50deg) rotateX(20deg);
+  }
+}
+
+/* Sway Variation 2: Counter-drift with gentle leaf fluttering */
+.leaf-sway-2 {
+  animation-name: leafSway2;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes leafSway2 {
+  0%, 100% {
+    transform: translateX(0) rotateZ(20deg) rotateY(0deg) rotateX(0deg);
+  }
+  25% {
+    transform: translateX(-24px) rotateZ(-30deg) rotateY(-55deg) rotateX(25deg);
+  }
+  50% {
+    transform: translateX(-10px) rotateZ(-70deg) rotateY(-105deg) rotateX(50deg);
+  }
+  75% {
+    transform: translateX(18px) rotateZ(-110deg) rotateY(-55deg) rotateX(20deg);
+  }
+}
+
+/* Sway Variation 3: Wide gliding tumble */
+.leaf-sway-3 {
+  animation-name: leafSway3;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes leafSway3 {
+  0%, 100% {
+    transform: translateX(0) rotateZ(0deg) rotateY(10deg);
+  }
+  30% {
+    transform: translateX(-26px) rotateZ(50deg) rotateY(65deg) rotateX(30deg);
+  }
+  70% {
+    transform: translateX(28px) rotateZ(-45deg) rotateY(-65deg) rotateX(35deg);
+  }
+}
+
+/* Sway Variation 4: Delicate flutter in the breeze */
+.leaf-sway-4 {
+  animation-name: leafSway4;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes leafSway4 {
+  0%, 100% {
+    transform: translateX(0) rotateZ(-20deg) rotateY(0deg);
+  }
+  35% {
+    transform: translateX(18px) rotateZ(25deg) rotateY(40deg) rotateX(15deg);
+  }
+  65% {
+    transform: translateX(-20px) rotateZ(-30deg) rotateY(-45deg) rotateX(20deg);
+  }
+}

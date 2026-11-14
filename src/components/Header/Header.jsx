@@ -1,6 +1,5 @@
 import React from 'react';
 import './Header.css';
-import bgImg from '../../assets/images/bg.png';
 import emblemImg from '../../assets/images/emblem.png';
 import { weddingData } from '../../data/weddingData';
 
@@ -12,18 +11,22 @@ export default function Header({ data, couple }) {
   const emblemSrc = headerData?.placeholderImage || emblemImg;
 
   const brideFirstName = coupleData?.bride?.firstName || "Manisha";
-  const brideParents = coupleData?.bride?.parents || "Daughter of Smt.Maya &\u00A0 Shri.Murali";
+  const brideParents = coupleData?.bride?.parents || "Daughter of Smt\u00A0 Maya &\u00A0 Shri\u00A0 Murali";
   const formattedBrideParents = (brideParents.startsWith('(') ? brideParents : `(${brideParents})`)
     .replace(/&\s*(?=\S)/g, '&\u00A0 ');
 
   const groomFirstName = coupleData?.groom?.firstName || "Neel";
-  const groomParents = coupleData?.groom?.parents || "Son of Smt.Sheena &\u00A0 Shri.Premchandran";
+  const groomParents = coupleData?.groom?.parents || "Son of Smt\u00A0Sheena &\u00A0 Shri\u00A0 Premchandran";
   const formattedGroomParents = (groomParents.startsWith('(') ? groomParents : `(${groomParents})`)
     .replace(/&\s*(?=\S)/g, '&\u00A0 ');
 
+  // const rawShloka = headerData?.shloka || [
+  //   "मंगलम् भगवान विष्णुः, मंगलम् गरुणध्वजः।",
+  //   "मंगलम् पुण्डरी काक्षः, मंगलाय तनो हरिः॥"
+  // ];
   const rawShloka = headerData?.shloka || [
-    "मंगलम् भगवान विष्णुः, मंगलम् गरुणध्वजः।",
-    "मंगलम् पुण्डरी काक्षः, मंगलाय तनो हरिः॥"
+    "मङ्गलं भगवान् विष्णुः, मङ्गलं गरुडध्वजः।",
+"मङ्गलं पुण्डरीकाक्षः, मङ्गलाय तनो हरिः॥"
   ];
 
   const shlokaLines = Array.isArray(rawShloka)
@@ -65,7 +68,6 @@ export default function Header({ data, couple }) {
   return (
     <header 
       className="wedding-header"
-      style={{ backgroundImage: `url(${bgImg})` }}
     >
       <div className="header-overlay" aria-hidden="true"></div>
 

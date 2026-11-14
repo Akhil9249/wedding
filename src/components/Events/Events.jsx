@@ -1,6 +1,5 @@
 import React from 'react';
 import './Events.css';
-import bgImg from '../../assets/images/bg.png';
 import poolsideImg from '../../assets/images/poolside.png';
 import ornamentImg from '../../assets/images/ornament.png';
 
@@ -8,7 +7,6 @@ export default function Events() {
   return (
     <section 
       className="wedding-event-pool"
-      style={{ backgroundImage: `url(${bgImg})` }}
     >
       <div className="event-overlay" aria-hidden="true"></div>
 

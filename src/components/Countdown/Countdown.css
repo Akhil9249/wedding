@@ -1,9 +1,7 @@
 .wedding-sangeet {
   text-align: center;
   padding: 0 16px 0;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: transparent;
   position: relative;
   overflow: hidden;
   border: none;
@@ -213,7 +211,7 @@
 
 /* Illustration (Full Edge-to-Edge Width) */
 .sangeet-illustration-wrapper {
-  margin: 50px -16px 0;
+  margin: 50px -16px -34px;
   width: calc(100% + 32px);
   max-width: none;
   border: none;

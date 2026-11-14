@@ -1,6 +1,5 @@
 import React from 'react';
 import './Countdown.css';
-import bgImg from '../../assets/images/bg.png';
 import ornamentImg from '../../assets/images/ornament.png';
 import sangeetImg from '../../assets/images/sangeet.png';
 import { weddingData } from '../../data/weddingData';
@@ -11,7 +10,6 @@ export default function Countdown({ data }) {
   return (
     <section 
       className="wedding-sangeet"
-      style={{ backgroundImage: `url(${bgImg})` }}
     >
       <div className="sangeet-overlay" aria-hidden="true"></div>
 
