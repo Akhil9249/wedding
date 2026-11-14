@@ -7,12 +7,12 @@ import ornamentImg from '../../assets/images/ornament.png';
 export default function Events() {
   return (
     <section 
-      className="wedding-event-pool scroll-reveal"
+      className="wedding-event-pool"
       style={{ backgroundImage: `url(${bgImg})` }}
     >
       <div className="event-overlay" aria-hidden="true"></div>
 
-      <div className="event-content">
+      <div className="event-content scroll-reveal">
         {/* Top Decorative Ornament */}
         <div className="pool-ornament-wrap">
           <img 

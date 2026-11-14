@@ -198,7 +198,7 @@
   font-family: 'Calendula', var(--font-body, 'Cormorant Garamond'), Georgia, serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 14px;
+  font-size: 13.5px;
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
@@ -255,6 +255,12 @@
 }
 
 /* Responsive Scaling */
+@media (max-width: 480px) {
+  .darshanam-venue-text {
+    font-size: 12px;
+  }
+}
+
 @media (max-width: 360px) {
   .darshanam-venue-box {
     min-width: auto;
@@ -263,7 +269,7 @@
     min-height: 26px;
   }
   .darshanam-venue-text {
-    font-size: 11px;
+    font-size: 10.5px;
   }
   .darshanam-title {
     font-size: 34px;

@@ -68,12 +68,12 @@ export const weddingData = {
     bride: {
       firstName: "Manisha",
       fullName: "Manisha Sharma",
-      parents: "Daughter of Smt. Maya & Shri. Murali"
+      parents: "Daughter of Smt.Maya &\u00A0 Shri.Murali"
     },
     groom: {
       firstName: "Neel",
       fullName: "Neel Patel",
-      parents: "Son of Smt. Sheena &  Shri .Premchandran"
+      parents: "Son of Smt.Sheena &\u00A0 Shri.Premchandran"
     },
     tagline: "Together with their families invite you to celebrate their wedding"
   },

@@ -10,12 +10,12 @@ export default function RSVP({ data }) {
 
   return (
     <section 
-      className="wedding-varmala scroll-reveal"
+      className="wedding-varmala"
       style={{ backgroundImage: `url(${bgImg})` }}
     >
       <div className="varmala-overlay" aria-hidden="true"></div>
 
-      <div className="varmala-content">
+      <div className="varmala-content scroll-reveal">
         {/* Intro Tagline */}
         <p className="varmala-tagline">
           {event?.tagline || "Witness an evening of sacred vows and promises for a lifetime"}
@@ -30,7 +30,7 @@ export default function RSVP({ data }) {
         {/* Date & Time */}
         <div className="varmala-schedule">
           <p className="schedule-date">{event?.date || "Date: Tuesday, 5th January 2027"}</p>
-          <p className="schedule-time">{event?.time || "Time: 3:30pm"}</p>
+          <p className="schedule-time">{event?.time || "Time: 3:30 PM"}</p>
         </div>
 
         {/* Venue Button */}

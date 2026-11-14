@@ -17,7 +17,10 @@
   width: 100%;
   max-width: var(--content-max-width, 404px);
   min-height: 100vh;
-  background: var(--bg-paper, #fcfbf7);
+  background-color: #fcfbf7;
+  background-repeat: repeat-y;
+  background-size: 100% auto;
+  background-position: top center;
   box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
   position: relative;
   overflow-x: hidden;

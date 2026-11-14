@@ -80,3 +80,10 @@ body {
   opacity: 1 !important;
   transform: translateY(0);
 }
+
+/* Guard: Ensure section and header background images are never hidden by scroll-reveal */
+section.scroll-reveal,
+header.scroll-reveal {
+  opacity: 1 !important;
+  transform: none !important;
+}

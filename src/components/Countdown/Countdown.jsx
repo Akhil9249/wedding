@@ -10,12 +10,12 @@ export default function Countdown({ data }) {
 
   return (
     <section 
-      className="wedding-sangeet scroll-reveal"
+      className="wedding-sangeet"
       style={{ backgroundImage: `url(${bgImg})` }}
     >
       <div className="sangeet-overlay" aria-hidden="true"></div>
 
-      <div className="sangeet-content">
+      <div className="sangeet-content scroll-reveal">
         {/* Top Decorative Ornament */}
         <div className="sangeet-ornament-wrap">
           <img

@@ -11,12 +11,12 @@ export default function Venue({ data, venue }) {
 
   return (
     <section 
-      className="wedding-darshanam scroll-reveal"
+      className="wedding-darshanam"
       style={{ backgroundImage: `url(${bgImg})` }}
     >
       <div className="darshanam-overlay" aria-hidden="true"></div>
 
-      <div className="darshanam-content">
+      <div className="darshanam-content scroll-reveal">
         {/* Top Decorative Ornament */}
         <div className="darshanam-ornament-wrap">
           <img

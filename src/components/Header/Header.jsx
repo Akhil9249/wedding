@@ -12,12 +12,14 @@ export default function Header({ data, couple }) {
   const emblemSrc = headerData?.placeholderImage || emblemImg;
 
   const brideFirstName = coupleData?.bride?.firstName || "Manisha";
-  const brideParents = coupleData?.bride?.parents || "Daughter of Smt. Maya & Shri. Murali";
-  const formattedBrideParents = brideParents.startsWith('(') ? brideParents : `(${brideParents})`;
+  const brideParents = coupleData?.bride?.parents || "Daughter of Smt.Maya &\u00A0 Shri.Murali";
+  const formattedBrideParents = (brideParents.startsWith('(') ? brideParents : `(${brideParents})`)
+    .replace(/&\s*(?=\S)/g, '&\u00A0 ');
 
   const groomFirstName = coupleData?.groom?.firstName || "Neel";
-  const groomParents = coupleData?.groom?.parents || "Son of Smt. Sheena &  Shri .Premchandran";
-  const formattedGroomParents = groomParents.startsWith('(') ? groomParents : `(${groomParents})`;
+  const groomParents = coupleData?.groom?.parents || "Son of Smt.Sheena &\u00A0 Shri.Premchandran";
+  const formattedGroomParents = (groomParents.startsWith('(') ? groomParents : `(${groomParents})`)
+    .replace(/&\s*(?=\S)/g, '&\u00A0 ');
 
   const rawShloka = headerData?.shloka || [
     "मंगलम् भगवान विष्णुः, मंगलम् गरुणध्वजः।",

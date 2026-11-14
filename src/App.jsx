@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import bgImg from './assets/images/bg.png';
 import { weddingData } from './data/weddingData';
 import { useScrollReveal } from './hooks/useScrollReveal';
 
@@ -19,7 +20,11 @@ function App() {
 
   return (
     <div className="wedding-app-wrapper">
-      <main className="invitation-container" aria-label="Digital Wedding Invitation">
+      <main 
+        className="invitation-container" 
+        style={{ backgroundImage: `url(${bgImg})` }}
+        aria-label="Digital Wedding Invitation"
+      >
         {/* Floating Background Music Player */}
         {/* <MusicPlayer /> */}
 

@@ -47,7 +47,7 @@ export default function Couple({ couple }) {
         {/* Date & Muhurtham */}
         <div className="ceremony-schedule scroll-reveal">
           <p className="schedule-date">Date: Thursday, 31st December 2026</p>
-          <p className="schedule-muhurtham">Muhurtham: 9:00am</p>
+          <p className="schedule-muhurtham">Muhurtham: 9:00 AM</p>
         </div>
 
         {/* Venue Pill Button */}

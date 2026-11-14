@@ -11,7 +11,7 @@ export default function Reception({ data }) {
 
   return (
     <section 
-      className="wedding-reception scroll-reveal"
+      className="wedding-reception"
       style={{ backgroundImage: `url(${bgImg})` }}
       aria-label="Wedding Reception Event"
     >
@@ -37,7 +37,7 @@ export default function Reception({ data }) {
         aria-hidden="true"
       />
 
-      <div className="reception-content">
+      <div className="reception-content scroll-reveal">
         {/* Intro Tagline */}
         <p className="reception-tagline">
           A celebration of love, tradition, and the coming<br />
