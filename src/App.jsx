@@ -26,7 +26,7 @@ function App() {
         aria-label="Digital Wedding Invitation"
       >
         {/* Floating Background Music Player */}
-        {/* <MusicPlayer /> */}
+        <MusicPlayer />
 
         {/* 1. Header with Auspicious Blessings */}
         <Header data={weddingData.header} couple={weddingData.couple} />

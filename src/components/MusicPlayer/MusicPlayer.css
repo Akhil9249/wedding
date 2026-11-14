@@ -1,46 +1,130 @@
 .music-player-fab {
   position: fixed;
   bottom: 24px;
-  right: 24px;
+  right: calc(50% - (var(--content-max-width, 404px) / 2) + 16px);
   z-index: 1000;
+  pointer-events: auto;
 }
 
 .music-btn {
-  background: var(--primary-burgundy, #7a1f36);
-  color: #fff;
-  border: 2px solid var(--accent-gold, #c59b27);
   border-radius: 50%;
-  width: 52px;
-  height: 52px;
+  width: 48px;
+  height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-  transition: transform 0.2s ease, background 0.3s ease;
   position: relative;
+  outline: none;
+  padding: 0;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+              background 0.3s ease, 
+              border-color 0.3s ease, 
+              box-shadow 0.3s ease,
+              color 0.3s ease;
 }
 
-.music-btn:hover {
+.music-btn:active {
+  transform: scale(0.92) !important;
+}
+
+/* Muted state: Elegant Ivory/Parchment with Burgundy Icon and Gold Border */
+.music-btn.muted {
+  background: var(--bg-paper, #fcfbf7);
+  color: var(--primary-burgundy, #7a1f36);
+  border: 1.5px solid var(--accent-gold, #c59b27);
+  box-shadow: 0 4px 14px rgba(44, 25, 10, 0.18), inset 0 0 0 1px rgba(255, 255, 255, 0.8);
+  animation: pulseMute 2.8s ease-in-out infinite;
+}
+
+.music-btn.muted:hover {
+  background: #ffffff;
+  border-color: var(--gold-light, #e5c158);
+  color: var(--secondary-burgundy, #541123);
   transform: scale(1.08);
-  background: var(--secondary-burgundy, #541123);
+  box-shadow: 0 6px 18px rgba(122, 31, 54, 0.25), 0 0 10px rgba(197, 155, 39, 0.3);
 }
 
+/* Playing state: Royal Wedding Burgundy Gradient with Radiant Gold Sound Icon */
 .music-btn.playing {
-  animation: pulseRotate 4s linear infinite;
+  background: linear-gradient(135deg, var(--primary-burgundy, #7a1f36) 0%, #2A0F32 100%);
+  color: var(--gold-light, #e5c158);
+  border: 2px solid var(--accent-gold, #c59b27);
+  box-shadow: 0 4px 16px rgba(42, 15, 50, 0.35), 0 0 10px rgba(197, 155, 39, 0.25);
+  animation: pulseRotate 6s linear infinite;
 }
 
-.music-icon {
-  font-size: 1.3rem;
+.music-btn.playing:hover {
+  background: linear-gradient(135deg, var(--secondary-burgundy, #541123) 0%, #1f0624 100%);
+  border-color: var(--gold-light, #e5c158);
+  transform: scale(1.08);
+  box-shadow: 0 6px 20px rgba(42, 15, 50, 0.45), 0 0 14px rgba(229, 193, 88, 0.4);
+}
+
+.music-icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
 }
 
 .music-tooltip {
-  display: none;
+  position: absolute;
+  right: 56px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(44, 25, 10, 0.88);
+  backdrop-filter: blur(4px);
+  color: var(--bg-paper, #fcfbf7);
+  border: 1px solid var(--border-gold, rgba(197, 155, 39, 0.4));
+  font-family: var(--font-body, 'Cormorant Garamond', Georgia, serif);
+  font-size: 11.5px;
+  letter-spacing: 0.5px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.music-btn:hover .music-tooltip {
+  opacity: 1;
+  transform: translateY(-50%) translateX(-4px);
 }
 
 @keyframes pulseRotate {
-  0% { transform: scale(1) rotate(0deg); }
-  50% { transform: scale(1.06) rotate(180deg); }
-  100% { transform: scale(1) rotate(360deg); }
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(180deg) scale(1.03); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes pulseMute {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 4px 14px rgba(44, 25, 10, 0.18);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(197, 155, 39, 0.4), 0 0 8px rgba(197, 155, 39, 0.2);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 440px) {
+  .music-player-fab {
+    bottom: 16px;
+    right: 16px;
+  }
+  .music-btn {
+    width: 42px;
+    height: 42px;
+  }
+  .music-tooltip {
+    display: none;
+  }
 }
 
