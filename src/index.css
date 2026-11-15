@@ -60,6 +60,13 @@ body {
   font-family: var(--font-body, 'Garamond', serif);
   color: #000000;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+img {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: auto;
 }
 
 #root {
@@ -78,7 +85,8 @@ body {
 
 .scroll-reveal.is-visible {
   opacity: 1 !important;
-  transform: translateY(0);
+  transform: none !important;
+  will-change: auto !important;
 }
 
 /* Guard: Ensure section and header background images are never hidden by scroll-reveal */
@@ -86,4 +94,5 @@ section.scroll-reveal,
 header.scroll-reveal {
   opacity: 1 !important;
   transform: none !important;
+  will-change: auto !important;
 }
