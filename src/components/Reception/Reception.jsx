@@ -105,7 +105,7 @@ export default function Reception({ data }) {
         </div>
 
         {/* Bottom Credits Footer Bar */}
-        <footer className="reception-footer">
+        <footer className="reception-footer" style={{ backgroundColor: '#2C190A' }}>
           <span className="footer-brand">
             <span className="brand-bold">Urban</span> <span className="brand-light">Knots</span>
           </span>

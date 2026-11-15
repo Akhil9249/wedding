@@ -261,7 +261,8 @@
 .reception-footer {
   margin: 4px -16px 0;
   width: calc(100% + 32px);
-  background: #2C190A;
+  background-color: #2C190A !important;
+  background: #2C190A !important;
   border-top: none;
   position: relative;
   display: flex;
