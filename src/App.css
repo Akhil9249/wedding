@@ -40,9 +40,9 @@
 .invitation-container h5,
 .invitation-container h6,
 .invitation-container p,
-.invitation-container span:not(.music-player-container *):not(.reception-footer *),
-.invitation-container a:not(.music-player-container *):not(.reception-footer *),
-.invitation-container div:not(.music-player-container *):not(.reception-footer *) {
+.invitation-container span:not(.music-player-container *):not(.reception-footer *):not(.app-footer *),
+.invitation-container a:not(.music-player-container *):not(.reception-footer *):not(.app-footer *),
+.invitation-container div:not(.music-player-container *):not(.reception-footer *):not(.app-footer *) {
   color: #000000;
 }
 

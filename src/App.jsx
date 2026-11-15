@@ -12,6 +12,7 @@ import Countdown from './components/Countdown/Countdown';
 import Venue from './components/Venue/Venue';
 import RSVP from './components/RSVP/RSVP';
 import Reception from './components/Reception/Reception';
+import Footer from './components/Footer/Footer';
 import MusicPlayer from './components/MusicPlayer/MusicPlayer';
 import FallingPetals from './components/FallingPetals/FallingPetals';
 
@@ -58,7 +59,7 @@ function App() {
         <Reception data={weddingData.reception} />
 
         {/* Footer */}
-   
+        <Footer />
       </main>
     </div>
   );
