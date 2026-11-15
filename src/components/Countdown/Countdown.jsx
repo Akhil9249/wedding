@@ -3,6 +3,7 @@ import './Countdown.css';
 import ornamentImg from '../../assets/images/ornament.png';
 import sangeetImg from '../../assets/images/sangeet.png';
 import { weddingData } from '../../data/weddingData';
+import { GiClick } from 'react-icons/gi';
 
 export default function Countdown({ data }) {
   const event = data || weddingData.sangeet;
@@ -55,6 +56,7 @@ export default function Countdown({ data }) {
             <span className="sangeet-venue-text">
               {event?.venue || "Venue: Open stage, Ashirvadh Nature Resort, Wayanad"}
             </span>
+            <GiClick className="sangeet-venue-click-icon" aria-hidden="true" />
           </a>
         </div>
 

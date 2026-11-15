@@ -4,7 +4,9 @@ import bellLeftImg from '../../assets/images/bell-left.png';
 import bellRightImg from '../../assets/images/bell-right.png';
 import receptionImg from '../../assets/images/reception.png';
 import receptionTitleImg from '../../assets/images/the-beginning-of-always.png';
+import rectangleImg from '../../assets/images/Rectangle.png';
 import { weddingData } from '../../data/weddingData';
+import { GiClick } from 'react-icons/gi';
 
 export default function Reception({ data }) {
   const event = data || weddingData.reception;
@@ -77,6 +79,7 @@ export default function Reception({ data }) {
             <span className="reception-venue-text">
               {event?.venue || "Venue: Klay-hills, Calicut"}
             </span>
+            <GiClick className="reception-venue-click-icon" aria-hidden="true" />
           </a>
         </div>
 
@@ -90,6 +93,15 @@ export default function Reception({ data }) {
             height="472"
             loading="eager"
           />
+          <div className="reception-crafted-by-wrap">
+            <img 
+              src={rectangleImg} 
+              alt="Conceptualised & crafted by Urban Knots" 
+              className="reception-crafted-by-img"
+              width="76"
+              height="24"
+            />
+          </div>
         </div>
 
         {/* Bottom Credits Footer Bar */}

@@ -5,6 +5,7 @@ import naadanVirunnuImg from '../../assets/images/naadan-virunnu.png';
 import kerala01Img from '../../assets/images/kerala01.png';
 import flyingParrotImg from '../../assets/images/flying-parrot-right.webp';
 import { weddingData } from '../../data/weddingData';
+import { GiClick } from 'react-icons/gi';
 
 export default function Venue({ data, venue }) {
   const event = data || venue || weddingData.mangalaDarshanam;
@@ -80,6 +81,7 @@ export default function Venue({ data, venue }) {
             <span className="darshanam-venue-text">
               {event?.venue || "Venue: Auditorium, Ashirvadh Nature Resort, Wayanad"}
             </span>
+            <GiClick className="darshanam-venue-click-icon" aria-hidden="true" />
           </a>
         </div>
 

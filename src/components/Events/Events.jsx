@@ -2,6 +2,7 @@ import React from 'react';
 import './Events.css';
 import poolsideImg from '../../assets/images/poolside.png';
 import ornamentImg from '../../assets/images/ornament.png';
+import { GiClick } from 'react-icons/gi';
 
 export default function Events() {
   return (
@@ -51,6 +52,7 @@ export default function Events() {
             <span className="pool-venue-text">
               Venue: Poolside, Ashirvadh Nature Resort, Wayanad
             </span>
+            <GiClick className="pool-venue-click-icon" aria-hidden="true" />
           </a>
         </div>
 

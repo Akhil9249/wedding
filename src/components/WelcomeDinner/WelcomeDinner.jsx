@@ -2,6 +2,7 @@ import React from 'react';
 import './WelcomeDinner.css';
 import welcomeDinnerImg from '../../assets/images/welcome-dinner.png';
 import { weddingData } from '../../data/weddingData';
+import { GiClick } from 'react-icons/gi';
 
 export default function WelcomeDinner({ data }) {
   const event = data || weddingData.welcomeDinner;
@@ -61,6 +62,7 @@ export default function WelcomeDinner({ data }) {
             <span className="welcome-dinner-venue-text">
               {event?.venue || "Venue: Lawn, Morickap Lords 83, Wayanad"}
             </span>
+            <GiClick className="welcome-dinner-venue-click-icon" aria-hidden="true" />
           </a>
         </div>
 

@@ -129,48 +129,34 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 6px;
   width: fit-content;
   max-width: 95%;
   min-height: 28px;
   height: 28px;
   box-sizing: border-box;
-  border: 1px solid #2C190A;
+  border: 1px solid #000000;
   border-radius: 6px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   margin: 0 auto;
-  background: rgba(255, 255, 255, 0.55);
+  background: rgba(255, 255, 255, 0.65);
   text-decoration: none;
   cursor: pointer;
   user-select: none;
   text-align: center;
-  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
-  animation: welcomeVenueBlink 1.8s ease-in-out infinite;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 .welcome-dinner-venue-box:hover {
-  transform: scale(1.03);
+  transform: scale(1.02);
   background: #ffffff;
-  animation-play-state: paused;
-  box-shadow: 0 4px 14px rgba(44, 25, 10, 0.2);
+  border-color: #000000;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
 }
 
 .welcome-dinner-venue-box:active {
-  transform: scale(0.98);
-}
-
-@keyframes welcomeVenueBlink {
-  0%, 100% {
-    opacity: 1;
-    border-color: #2C190A;
-    box-shadow: 0 0 0 0 rgba(44, 25, 10, 0.3);
-    background: rgba(255, 255, 255, 0.5);
-  }
-  50% {
-    opacity: 0.65;
-    border-color: #7a1f36;
-    box-shadow: 0 0 10px 2px rgba(122, 31, 54, 0.35);
-    background: rgba(255, 255, 255, 0.95);
-  }
+  transform: scale(0.97);
 }
 
 .welcome-dinner-venue-text {
@@ -184,6 +170,35 @@
   color: #000000;
   display: inline-block;
   white-space: nowrap;
+}
+
+.welcome-dinner-venue-click-icon {
+  width: 18px;
+  height: 18px;
+  font-size: 18px;
+  flex-shrink: 0;
+  color: #000000;
+  display: inline-block;
+  vertical-align: middle;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  animation: welcomeVenueTapPulse 1.8s ease-in-out infinite;
+}
+
+.welcome-dinner-venue-box:hover .welcome-dinner-venue-click-icon {
+  animation-play-state: paused;
+  transform: scale(1.15);
+  opacity: 1;
+}
+
+@keyframes welcomeVenueTapPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.95;
+  }
+  50% {
+    transform: scale(0.92);
+    opacity: 0.45;
+  }
 }
 
 /* Illustration (Full Edge-to-Edge Width) */

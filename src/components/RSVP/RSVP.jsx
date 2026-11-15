@@ -3,6 +3,7 @@ import './RSVP.css';
 import varmalaImg from '../../assets/images/varmala.png';
 import ornamentImg from '../../assets/images/ornament.png';
 import { weddingData } from '../../data/weddingData';
+import { GiClick } from 'react-icons/gi';
 
 export default function RSVP({ data }) {
   const event = data || weddingData.varmala;
@@ -67,6 +68,7 @@ export default function RSVP({ data }) {
             <span className="varmala-venue-text">
               {event?.venue || "Venue: Amphitheatre, Ashirvadh Nature Resort, Wayanad"}
             </span>
+            <GiClick className="varmala-venue-click-icon" aria-hidden="true" />
           </a>
         </div>
 

@@ -5,6 +5,7 @@ import ornamentImg from '../../assets/images/ornament.png';
 import thirukalyanamImg from '../../assets/images/couple/Thirukalyanam.svg';
 import perchedParrotImg from '../../assets/images/perched-parrot.webp';
 import flyingParrotImg from '../../assets/images/flying-parrot.webp';
+import { GiClick } from 'react-icons/gi';
 
 export default function Couple({ couple }) {
   return (
@@ -60,30 +61,7 @@ export default function Couple({ couple }) {
             aria-label="View Venue on Google Maps"
           >
             <span className="venue-text">Venue: Guruvayur Sree Krishna Temple, Guruvayur</span>
-            <svg 
-              className="venue-click-icon" 
-              viewBox="15 0 226 240" 
-              width="15" 
-              height="16" 
-              fill="#000000" 
-              aria-hidden="true"
-            >
-              {/* Outer Concentric Ripple Ring */}
-              <path 
-                className="venue-ripple-outer" 
-                d="M 79.88,113.87 A 56,56 0 1,1 144.12,113.87 L 137.24,104.04 A 44,44 0 1,0 86.76,104.04 Z" 
-              />
-              {/* Inner Concentric Ripple Ring */}
-              <path 
-                className="venue-ripple-inner" 
-                d="M 95.00,97.44 A 34,34 0 1,1 129.00,97.44 L 123.00,87.05 A 22,22 0 1,0 101.00,87.05 Z" 
-              />
-              {/* Solid Tap Hand Body */}
-              <path 
-                className="venue-hand-body"
-                d="M207.23,120c-8.61.4-15.23,7.82-15.23,16.43v7.28a8.17,8.17,0,0,1-7.47,8.25,8,8,0,0,1-8.53-8V120.45c0-8.61-6.62-16-15.23-16.43A16,16,0,0,0,144,120v15.73a8.17,8.17,0,0,1-7.47,8.25,8,8,0,0,1-8.53-8V64.45c0-8.61-6.62-16-15.23-16.43A16,16,0,0,0,96,64V183.74a8.19,8.19,0,0,1-6.72,8.16l-.12,0a6.09,6.09,0,0,1-6-3.09l-21-36.44c-4.3-7.46-13.74-10.57-21.4-6.62A16,16,0,0,0,34.15,168L65.1,228.05A8,8,0,0,0,72,232H208a8,8,0,0,0,7.16-4.42c.36-.72,8.84-15.06,8.84-40.65V136A16,16,0,0,0,207.23,120Z" 
-              />
-            </svg>
+            <GiClick className="venue-click-icon" aria-hidden="true" />
           </a>
         </div>
 

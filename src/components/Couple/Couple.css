@@ -174,47 +174,31 @@
 }
 
 .venue-click-icon {
-  width: 15px;
-  height: 16px;
+  width: 18px;
+  height: 18px;
+  font-size: 18px;
   flex-shrink: 0;
   color: #000000;
   display: inline-block;
   vertical-align: middle;
-  overflow: visible;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  animation: venueTapPulse 1.8s ease-in-out infinite;
 }
 
 .venue-box:hover .venue-click-icon {
-  transform: scale(1.12);
-}
-
-/* Concentric Ripple Rings at Fingertip - Blinking animation */
-.venue-ripple-inner {
-  animation: venueRingBlink 1.1s ease-in-out infinite;
-  transform-origin: 112px 68px;
-}
-
-.venue-ripple-outer {
-  animation: venueRingBlink 1.1s ease-in-out infinite;
-  animation-delay: 0.2s;
-  transform-origin: 112px 68px;
-}
-
-.venue-box:hover .venue-ripple-inner,
-.venue-box:hover .venue-ripple-outer {
   animation-play-state: paused;
+  transform: scale(1.15);
   opacity: 1;
-  transform: scale(1);
 }
 
-@keyframes venueRingBlink {
+@keyframes venueTapPulse {
   0%, 100% {
-    opacity: 1;
     transform: scale(1);
+    opacity: 0.95;
   }
   50% {
-    opacity: 0.15;
-    transform: scale(0.93);
+    transform: scale(0.92);
+    opacity: 0.45;
   }
 }
 
