@@ -35,8 +35,6 @@ function App() {
         {/* 1. Header with Auspicious Blessings */}
         <Header data={weddingData.header} couple={weddingData.couple} />
 
-       
-
         {/* 3. Couple Section with Bride & Groom Details */}
         <Couple couple={weddingData.couple} />
 
