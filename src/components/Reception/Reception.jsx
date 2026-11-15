@@ -101,7 +101,7 @@ export default function Reception({ data }) {
             href="https://www.urbanknotsllp.com" 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="footer-link"
+            className="footer-link footer-link-website"
             aria-label="Visit Urban Knots website"
           >
             <svg className="footer-icon globe-icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -113,7 +113,7 @@ export default function Reception({ data }) {
           </a>
           <a 
             href="tel:+918129195151" 
-            className="footer-link"
+            className="footer-link footer-link-phone"
             aria-label="Call Urban Knots"
           >
             <svg className="footer-icon phone-icon" viewBox="0 0 24 24" width="12" height="12" fill="currentColor" aria-hidden="true">

@@ -52,7 +52,7 @@ export default function RSVP({ data }) {
         {/* Date & Time */}
         <div className="varmala-schedule">
           <p className="schedule-date">{event?.date || "Date: Tuesday, 5th January 2027"}</p>
-          <p className="schedule-time">{event?.time || "Time: 3:30 PM"}</p>
+          <p className="schedule-time">{event?.time || "Time: 4:00 PM"}</p>
         </div>
 
         {/* Venue Button */}

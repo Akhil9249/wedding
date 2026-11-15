@@ -51,7 +51,7 @@ export const weddingData = {
     title: "Varmala",
     subtitle: "(Wedding)",
     date: "Date: Tuesday, 5th January 2027",
-    time: "Time: 3:30 PM",
+    time: "Time: 4:00 PM",
     venue: "Venue: Amphitheatre, Ashirvadh Nature Resort, Wayanad",
     mapUrl: "https://maps.google.com/?q=Ashirvadh+Nature+Resort+Wayanad"
   },

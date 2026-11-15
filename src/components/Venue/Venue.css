@@ -239,83 +239,68 @@
   overflow: visible;
 }
 
-/* Macro Flight Path: Natural Undulating Flight along User's Diagonal at 100% Constant Forward Speed */
+/* Flight Path: Gentle reduced slope, smooth exit and entry, matching Couple.jsx style */
 .darshanam-parrot-flight-path {
   position: absolute;
-  top: 95px;
-  left: -15%;
-  width: 54px;
+  left: -22%;
+  top: 20px;
+  width: 48px;
   height: auto;
-  will-change: transform, left, top;
-  transform-origin: 50% 50%;
-  animation: parrotFlyAlongLine 5.6s linear -1.8s infinite;
+  will-change: transform, left, opacity;
+  transform-origin: 30% 40%;
+  animation: darshanamParrotFlyNonStop 5.6s linear infinite;
 }
 
-/* Micro Flap Bobbing: Natural Aerodynamic Wingbeat Lift & Breathing synchronized with 765ms WebP cycle */
+/* Micro Flap Bobbing */
 .darshanam-parrot-bob {
+  position: relative;
+  width: 48px;
+  height: 48px;
   will-change: transform;
-  animation: parrotFlapBob 0.765s ease-in-out infinite;
-  transform-origin: 45% 45%;
 }
 
-/* Rendered Parrot Image */
+/* Parrot Flying Image (flapping wings, matching Couple.jsx) */
 .darshanam-flying-parrot-img {
-  width: 54px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: auto;
   display: block;
   filter: drop-shadow(0 3px 6px rgba(44, 25, 10, 0.2));
 }
 
-/* Flap Bob Keyframes: Aerodynamic downstroke lift + glide */
-@keyframes parrotFlapBob {
-  0%, 100% {
-    transform: translateY(0px) rotateZ(0deg) scale(1);
-  }
-  32% {
-    transform: translateY(-4px) rotateZ(-2deg) scale(1.025);
-  }
-  70% {
-    transform: translateY(1.5px) rotateZ(1.5deg) scale(0.985);
-  }
-}
-
-/* Flight Path along User's Line with Natural Undulating Wave & 100% Constant Horizontal Velocity */
-@keyframes parrotFlyAlongLine {
+/* Continuous Flight Path from Left to Right with gentle reduced slope matching Couple.jsx */
+@keyframes darshanamParrotFlyNonStop {
   0% {
-    left: -15%;
-    top: 95px;
-    transform: rotateZ(-18deg);
+    left: -22%;
+    top: 20px;
+    transform: translateZ(0) rotateZ(2deg);
+    opacity: 0;
+  }
+  6% {
+    left: -13.5%;
+    top: 20.8px;
+    transform: translateZ(0) rotateZ(2deg);
     opacity: 1;
   }
-  20% {
-    left: 11%;
-    top: 62px;
-    transform: rotateZ(-22deg);
+  50% {
+    left: 49%;
+    top: 27px;
+    transform: translateZ(0) rotateZ(2deg);
     opacity: 1;
   }
-  40% {
-    left: 37%;
-    top: 32px;
-    transform: rotateZ(-17deg);
-    opacity: 1;
-  }
-  60% {
-    left: 63%;
-    top: -6px;
-    transform: rotateZ(-23deg);
-    opacity: 1;
-  }
-  80% {
-    left: 89%;
-    top: -48px;
-    transform: rotateZ(-19deg);
+  94% {
+    left: 111.5%;
+    top: 33.2px;
+    transform: translateZ(0) rotateZ(2deg);
     opacity: 1;
   }
   100% {
-    left: 115%;
-    top: -85px;
-    transform: rotateZ(-16deg);
-    opacity: 1;
+    left: 120%;
+    top: 34px;
+    transform: translateZ(0) rotateZ(2deg);
+    opacity: 0;
   }
 }
 

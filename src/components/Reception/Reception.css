@@ -226,10 +226,11 @@
   width: calc(100% + 32px);
   background: #F3E8DD;
   border-top: none;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 8px 14px;
+  padding: 8px 10px;
   box-sizing: border-box;
   white-space: nowrap;
 }
@@ -243,18 +244,29 @@
   line-height: 134%;
   letter-spacing: 0%;
   text-align: center;
-  color: #2C190A;
+  color: #000000;
   white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .footer-brand .brand-bold {
+  font-family: 'Poppins', sans-serif;
   font-weight: 500;
-  color: #2C190A;
+  font-size: 14px;
+  line-height: 134%;
+  letter-spacing: 0%;
+  color: #000000;
 }
 
 .footer-brand .brand-light {
+  font-family: 'Poppins', sans-serif;
   font-weight: 300;
-  color: #2C190A;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 134%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #000000;
 }
 
 .footer-link {
@@ -264,17 +276,25 @@
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 12px;
-  line-height: 134%;
-  letter-spacing: 0%;
-  text-align: center;
   color: #000000;
   text-decoration: none;
   white-space: nowrap;
+  flex-shrink: 0;
   transition: opacity 0.2s ease, text-decoration 0.2s ease;
 }
 
-.footer-link span {
+.footer-link-website {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.footer-link-website span {
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -282,6 +302,23 @@
   line-height: 134%;
   letter-spacing: 0%;
   text-align: center;
+  color: #000000;
+}
+
+.footer-link-phone {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.footer-link-phone span {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 11px;
+  line-height: 134%;
+  letter-spacing: 0%;
   color: #000000;
 }
 
@@ -292,18 +329,17 @@
 
 .footer-icon {
   flex-shrink: 0;
-  opacity: 0.9;
   color: #000000;
 }
 
 .globe-icon {
-  width: 14px;
-  height: 14px;
+  width: 13px;
+  height: 13px;
 }
 
 .phone-icon {
-  width: 13px;
-  height: 13px;
+  width: 11px;
+  height: 11px;
 }
 
 /* Responsive Scaling */
@@ -357,20 +393,20 @@
     padding: 7px 10px;
   }
   .footer-brand {
-    font-size: 12px;
+    font-size: 11px;
   }
   .footer-link,
   .footer-link span {
-    font-size: 11px;
+    font-size: 10px;
     gap: 3px;
   }
   .globe-icon {
-    width: 12px;
-    height: 12px;
-  }
-  .phone-icon {
     width: 11px;
     height: 11px;
+  }
+  .phone-icon {
+    width: 10px;
+    height: 10px;
   }
 }
 
@@ -386,21 +422,24 @@
   .reception-footer {
     padding: 6px 8px;
   }
+  .footer-link-website {
+    transform: translate(calc(-50% - 7px), -50%);
+  }
   .footer-brand {
-    font-size: 10.5px;
+    font-size: 10px;
   }
   .footer-link,
   .footer-link span {
-    font-size: 10px;
-    gap: 2px;
+    font-size: 9.5px;
+    gap: 3px;
   }
   .globe-icon {
-    width: 11px;
-    height: 11px;
+    width: 10.5px;
+    height: 10.5px;
   }
   .phone-icon {
-    width: 10px;
-    height: 10px;
+    width: 9.5px;
+    height: 9.5px;
   }
 }
 
