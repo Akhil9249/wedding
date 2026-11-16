@@ -1,6 +1,6 @@
 import React from 'react';
 import './WelcomeDinner.css';
-import welcomeDinnerImg from '../../assets/images/welcome-dinner.png';
+import welcomeDinnerImg from '../../assets/images/welcome-dinner.webp';
 import { weddingData } from '../../data/weddingData';
 import { GiClick } from 'react-icons/gi';
 
@@ -74,7 +74,8 @@ export default function WelcomeDinner({ data }) {
             className="welcome-dinner-illustration-img"
             width="402"
             height="517"
-            loading="eager"
+            loading="lazy"
+            decoding="async"
           />
         </div>
       </div>

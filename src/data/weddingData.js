@@ -1,4 +1,4 @@
-import emblemImg from '../assets/images/emblem.png';
+import emblemImg from '../assets/images/emblem.webp';
 
 export const weddingData = {
   header: {

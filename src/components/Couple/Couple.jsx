@@ -1,7 +1,7 @@
 import React from 'react';
 import './Couple.css';
-import coupleIllustrationImg from '../../assets/images/couple/couple-illustration.png';
-import ornamentImg from '../../assets/images/ornament.png';
+import coupleIllustrationImg from '../../assets/images/couple/couple-illustration.webp';
+import ornamentImg from '../../assets/images/ornament.webp';
 import thirukalyanamImg from '../../assets/images/couple/Thirukalyanam.svg';
 import perchedParrotImg from '../../assets/images/perched-parrot.webp';
 import flyingParrotImg from '../../assets/images/flying-parrot.webp';
@@ -78,6 +78,7 @@ export default function Couple({ couple }) {
                   width="349"
                   height="351"
                   loading="eager"
+            decoding="async"
                 />
                 <img
                   src={flyingParrotImg}
@@ -86,6 +87,7 @@ export default function Couple({ couple }) {
                   width="349"
                   height="351"
                   loading="eager"
+            decoding="async"
                 />
               </div>
             </div>
@@ -98,6 +100,7 @@ export default function Couple({ couple }) {
             width="402"
             height="511"
             loading="eager"
+            decoding="async"
           />
         </div>
 

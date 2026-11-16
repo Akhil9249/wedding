@@ -1,6 +1,6 @@
 import React from 'react';
 import './Header.css';
-import emblemImg from '../../assets/images/emblem.png';
+import emblemImg from '../../assets/images/emblem.webp';
 import { weddingData } from '../../data/weddingData';
 
 export default function Header({ data, couple }) {
@@ -82,6 +82,8 @@ export default function Header({ data, couple }) {
               width="88"
               height="120"
               loading="eager"
+              fetchPriority="high"
+              decoding="async"
             />
           )}
         </div>

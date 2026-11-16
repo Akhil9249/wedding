@@ -1,7 +1,7 @@
 import React from 'react';
 import './Countdown.css';
-import ornamentImg from '../../assets/images/ornament.png';
-import sangeetImg from '../../assets/images/sangeet.png';
+import ornamentImg from '../../assets/images/ornament.webp';
+import sangeetImg from '../../assets/images/sangeet.webp';
 import { weddingData } from '../../data/weddingData';
 import { GiClick } from 'react-icons/gi';
 
@@ -68,7 +68,8 @@ export default function Countdown({ data }) {
             className="sangeet-illustration-img"
             width="402"
             height="558"
-            loading="eager"
+            loading="lazy"
+            decoding="async"
           />
         </div>
       </div>

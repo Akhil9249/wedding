@@ -1,7 +1,7 @@
 import React from 'react';
 import './RSVP.css';
-import varmalaImg from '../../assets/images/varmala.png';
-import ornamentImg from '../../assets/images/ornament.png';
+import varmalaImg from '../../assets/images/varmala.webp';
+import ornamentImg from '../../assets/images/ornament.webp';
 import { weddingData } from '../../data/weddingData';
 import { GiClick } from 'react-icons/gi';
 
@@ -80,7 +80,8 @@ export default function RSVP({ data }) {
             className="varmala-illustration-img"
             width="402"
             height="459"
-            loading="eager"
+            loading="lazy"
+            decoding="async"
           />
         </div>
 
