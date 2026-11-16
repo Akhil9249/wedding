@@ -1,10 +1,10 @@
 import React from 'react';
 import './Reception.css';
-import bellLeftImg from '../../assets/images/bell-left.png';
-import bellRightImg from '../../assets/images/bell-right.png';
-import receptionImg from '../../assets/images/reception.png';
-import receptionTitleImg from '../../assets/images/the-beginning-of-always.png';
-import rectangleImg from '../../assets/images/Rectangle.png';
+import bellLeftImg from '../../assets/images/bell-left.webp';
+import bellRightImg from '../../assets/images/bell-right.webp';
+import receptionImg from '../../assets/images/reception.webp';
+import receptionTitleImg from '../../assets/images/the-beginning-of-always.webp';
+import rectangleImg from '../../assets/images/Rectangle.webp';
 import { weddingData } from '../../data/weddingData';
 import { GiClick } from 'react-icons/gi';
 
@@ -25,7 +25,8 @@ export default function Reception({ data }) {
         className="reception-bell-left"
         width="90"
         height="135"
-        loading="eager"
+        loading="lazy"
+        decoding="async"
         aria-hidden="true"
       />
       <img 
@@ -34,7 +35,8 @@ export default function Reception({ data }) {
         className="reception-bell-right"
         width="89"
         height="135"
-        loading="eager"
+        loading="lazy"
+        decoding="async"
         aria-hidden="true"
       />
 
@@ -91,7 +93,8 @@ export default function Reception({ data }) {
             className="reception-illustration-img"
             width="314"
             height="472"
-            loading="eager"
+            loading="lazy"
+        decoding="async"
           />
           <div className="reception-crafted-by-wrap">
             <img 

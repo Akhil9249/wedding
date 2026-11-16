@@ -1,8 +1,8 @@
 import React from 'react';
 import './Venue.css';
-import ornamentImg from '../../assets/images/ornament.png';
-import naadanVirunnuImg from '../../assets/images/naadan-virunnu.png';
-import kerala01Img from '../../assets/images/kerala01.png';
+import ornamentImg from '../../assets/images/ornament.webp';
+import naadanVirunnuImg from '../../assets/images/naadan-virunnu.webp';
+import kerala01Img from '../../assets/images/kerala01.webp';
 import flyingParrotImg from '../../assets/images/flying-parrot-right.webp';
 import { weddingData } from '../../data/weddingData';
 import { GiClick } from 'react-icons/gi';
@@ -56,7 +56,8 @@ export default function Venue({ data, venue }) {
             className="darshanam-title-img"
             width="235"
             height="49"
-            loading="eager"
+            loading="lazy"
+            decoding="async"
           />
         </h2>
 
@@ -97,7 +98,8 @@ export default function Venue({ data, venue }) {
                   className="darshanam-flying-parrot-img"
                   width="349"
                   height="351"
-                  loading="eager"
+                  loading="lazy"
+            decoding="async"
                 />
               </div>
             </div>
@@ -109,7 +111,8 @@ export default function Venue({ data, venue }) {
             className="darshanam-illustration-img"
             width="402"
             height="548"
-            loading="eager"
+            loading="lazy"
+            decoding="async"
           />
         </div>
       </div>

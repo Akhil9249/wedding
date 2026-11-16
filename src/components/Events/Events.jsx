@@ -1,7 +1,7 @@
 import React from 'react';
 import './Events.css';
-import poolsideImg from '../../assets/images/poolside.png';
-import ornamentImg from '../../assets/images/ornament.png';
+import poolsideImg from '../../assets/images/poolside.webp';
+import ornamentImg from '../../assets/images/ornament.webp';
 import { GiClick } from 'react-icons/gi';
 
 export default function Events() {
@@ -64,7 +64,8 @@ export default function Events() {
             className="pool-illustration-img"
             width="576"
             height="531"
-            loading="eager"
+            loading="lazy"
+            decoding="async"
           />
         </div>
       </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import bgImg from './assets/images/bg.png';
+import bgImg from './assets/images/bg.webp';
 import { weddingData } from './data/weddingData';
 import { useScrollReveal } from './hooks/useScrollReveal';
 
