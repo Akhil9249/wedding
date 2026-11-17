@@ -2,7 +2,7 @@ import React from 'react';
 import './Venue.css';
 import ornamentImg from '../../assets/images/ornament.webp';
 import naadanVirunnuImg from '../../assets/images/naadan-virunnu.webp';
-import kerala01Img from '../../assets/images/kerala01.webp';
+import kerala01Img from '../../assets/images/kerala01.png';
 import flyingParrotImg from '../../assets/images/flying-parrot-right.webp';
 import { weddingData } from '../../data/weddingData';
 import { GiClick } from 'react-icons/gi';
