@@ -2,7 +2,7 @@ import React from 'react';
 import './Reception.css';
 import bellLeftImg from '../../assets/images/bell-left.webp';
 import bellRightImg from '../../assets/images/bell-right.webp';
-import receptionImg from '../../assets/images/reception.webp';
+import receptionImg from '../../assets/images/reception.png';
 import receptionTitleImg from '../../assets/images/the-beginning-of-always.webp';
 import rectangleImg from '../../assets/images/Rectangle.webp';
 import { weddingData } from '../../data/weddingData';

@@ -1,7 +1,7 @@
 import React from 'react';
 import './Countdown.css';
 import ornamentImg from '../../assets/images/ornament.webp';
-import sangeetImg from '../../assets/images/sangeet.webp';
+import sangeetImg from '../../assets/images/sangeet.png';
 import { weddingData } from '../../data/weddingData';
 import { GiClick } from 'react-icons/gi';
 
