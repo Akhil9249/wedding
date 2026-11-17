@@ -1,6 +1,6 @@
 import React from 'react';
 import './WelcomeDinner.css';
-import welcomeDinnerImg from '../../assets/images/welcome-dinner.webp';
+import welcomeDinnerImg from '../../assets/images/welcome-dinner.png';
 import { weddingData } from '../../data/weddingData';
 import { GiClick } from 'react-icons/gi';
 
@@ -73,7 +73,7 @@ export default function WelcomeDinner({ data }) {
             alt="The First Toast welcome dinner lawn illustration"
             className="welcome-dinner-illustration-img"
             width="402"
-            height="517"
+            height="500"
             loading="lazy"
             decoding="async"
           />
