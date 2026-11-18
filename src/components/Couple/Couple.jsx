@@ -39,8 +39,8 @@ export default function Couple({ couple }) {
             src={vivahamImg} 
             alt="Vivaham" 
             className="thirukalyanam-title-img"
-            width="193"
-            height="76"
+            width="137"
+            height="54"
           />
         </h2>
         <p className="thirukalyanam-subtitle scroll-reveal">(Guruvayur Thalikettu)</p>
