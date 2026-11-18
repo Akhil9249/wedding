@@ -2,7 +2,7 @@ import React from 'react';
 import './Couple.css';
 import coupleIllustrationImg from '../../assets/images/couple/couple-illustration.webp';
 import ornamentImg from '../../assets/images/ornament.webp';
-import thirukalyanamImg from '../../assets/images/couple/Thirukalyanam.svg';
+import vivahamImg from '../../assets/images/couple/Vivaham.png';
 import perchedParrotImg from '../../assets/images/perched-parrot.webp';
 import flyingParrotImg from '../../assets/images/flying-parrot.webp';
 import { GiClick } from 'react-icons/gi';
@@ -36,11 +36,11 @@ export default function Couple({ couple }) {
         {/* Ceremony Titles */}
         <h2 className="thirukalyanam-title scroll-reveal">
           <img 
-            src={thirukalyanamImg} 
-            alt="Thirukalyanam" 
+            src={vivahamImg} 
+            alt="Vivaham" 
             className="thirukalyanam-title-img"
             width="193"
-            height="44"
+            height="76"
           />
         </h2>
         <p className="thirukalyanam-subtitle scroll-reveal">(Guruvayur Thalikettu)</p>
